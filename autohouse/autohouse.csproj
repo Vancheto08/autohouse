@@ -159,6 +159,12 @@
   <ItemGroup>
     <Analyzer Include="..\packages\NUnit.Analyzers.4.6.0\analyzers\dotnet\cs\nunit.analyzers.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{d9890492-ac69-4fd1-ad18-98479bbc05d7}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
