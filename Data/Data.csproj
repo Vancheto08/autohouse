@@ -122,7 +122,12 @@
   <ItemGroup>
     <Compile Include="AutohouseContext.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\Car.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Manufacturer.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Order_Car.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

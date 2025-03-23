@@ -8,6 +8,12 @@ namespace Data.Models
 {
     internal class Car
     {
-        public int Id { get; set; }
+        public int CarId { get; set; }
+        public string BrandId { get; set; }
+        public Brand Brand { get; set; }
+        public decimal Price { get; set; }
+        public int PublicationYear { get; set; }
+        public int Quantity  { get; set; }
+
     }
 }
