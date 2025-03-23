@@ -1,6 +1,6 @@
 ﻿namespace autohouse
 {
-    partial class Form2
+    partial class CarsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // CarsForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form2";
+            this.Name = "CarsForm";
+            this.Text = "Коли";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

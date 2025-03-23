@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace autohouse
 {
-    public partial class Form1 : Form
+    public partial class Autohouse : Form
     {
-        public Form1()
+        public Autohouse()
         {
             InitializeComponent();
+        }
+
+        private void openCarsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CarsForm carsForm = new CarsForm();
+            carsForm.ShowDialog();
         }
     }
 }
