@@ -40,7 +40,7 @@ namespace Business
             using (autohouseContext = new AutohouseContext())
             {
                 var item = autohouseContext.Cars.Find(car.CarId);
-                if (car != null)
+                if (item != null)
                 {
                     autohouseContext.Entry(item).CurrentValues.SetValues(car);
                     autohouseContext.SaveChanges();
