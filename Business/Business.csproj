@@ -122,6 +122,10 @@
   <ItemGroup>
     <Compile Include="BrandBusiness.cs" />
     <Compile Include="CarBusiness.cs" />
+    <Compile Include="CustomerBusiness.cs" />
+    <Compile Include="ManufacturerBusiness.cs" />
+    <Compile Include="OrderBusiness.cs" />
+    <Compile Include="OrderCarBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
