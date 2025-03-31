@@ -11,7 +11,7 @@ namespace Business
     public class OrderCarBusiness
     {
         private AutohouseContext autohouseContext;
-       
+
         public List<Order_Car> GetAll(int id)
         {
             using (autohouseContext = new AutohouseContext())
