@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Data
 {
-    internal class AutohouseContext : DbContext
+    public class AutohouseContext : DbContext
     {
         public AutohouseContext():base("name=AutohouseContext")
         {

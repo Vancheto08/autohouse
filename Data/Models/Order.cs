@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Data.Models
 {
-    internal class Order
+    public class Order
     {
         public int OrderId { get; set; }
         public int CustomerId {  get; set; }
