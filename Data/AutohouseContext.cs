@@ -15,5 +15,6 @@ namespace Data
 
         }
         public DbSet<Brand> Brands { get; set; }
+        public DbSet<Car> Cars { get; set; }
     }
 }
