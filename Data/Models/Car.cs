@@ -14,9 +14,7 @@ namespace Data.Models
         public decimal Price { get; set; }
         public int PublicationYear { get; set; }
         public int Quantity  { get; set; }
-        //proba aneliq pak
-        public string proba {  get; set; }
-        public string another {  get; set; }
+        
 
     }
 }
