@@ -12,7 +12,6 @@ namespace Data.Models
         public string Name { get; set; }
         public int ManufacturerId { get; set; }
         public Manufacturer Manufacturer { get; set; }
-        // proba vanche
-        public string Proba {  get; set; }
+        
     }
 }
