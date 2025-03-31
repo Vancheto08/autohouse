@@ -9,6 +9,11 @@ namespace Business
 {
     public class BrandBusiness
     {
-        private AutohouseContext p
+        private AutohouseContext autohouseContext;
+        public List<Brand> GetAll()
+        {
+
+        }
+
     }
 }
