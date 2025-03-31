@@ -39,9 +39,12 @@ namespace Business
         {
             using (autohouseContext = new AutohouseContext())
             {
-                var item = autohouseContext.Cars.Find(car.CarId);
-                autohouseContext.Entry(item).CurrentValues.SetValues(car);
-                autohouseContext.SaveChanges();
+                if (car != null)
+                {
+                    var item = autohouseContext.Cars.Find(car.CarId);
+                    autohouseContext.Entry(item).CurrentValues.SetValues(car);
+                    autohouseContext.SaveChanges();
+                }
             }
         }
 
