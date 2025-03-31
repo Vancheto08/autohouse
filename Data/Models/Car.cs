@@ -14,6 +14,7 @@ namespace Data.Models
         public decimal Price { get; set; }
         public int PublicationYear { get; set; }
         public int Quantity  { get; set; }
+        
 
     }
 }
