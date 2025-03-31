@@ -52,10 +52,10 @@ namespace Business
         {
             using (autohouseContext = new AutohouseContext())
             {
-                var item = autohouseContext.Brands.Find(id);
-                if (item != null)
+                var brand = autohouseContext.Brands.Find(id);
+                if (brand != null)
                 {
-                    autohouseContext.Brands.Remove(item);
+                    autohouseContext.Brands.Remove(brand);
                     autohouseContext.SaveChanges();
                 }
             }

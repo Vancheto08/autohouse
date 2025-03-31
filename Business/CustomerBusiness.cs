@@ -49,10 +49,10 @@ namespace Business
         {
             using (autohouseContext = new AutohouseContext())
             {
-                var item = autohouseContext.Customers.Find(id);
-                if (item != null)
+                var customer = autohouseContext.Customers.Find(id);
+                if (customer != null)
                 {
-                    autohouseContext.Customers.Remove(item);
+                    autohouseContext.Customers.Remove(customer);
                     autohouseContext.SaveChanges();
                 }
             }
