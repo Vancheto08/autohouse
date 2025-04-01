@@ -22,5 +22,41 @@ namespace autohouse
             CarForm carsForm = new CarForm();
             carsForm.ShowDialog();
         }
+
+        private void маркиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BrandForm brandForm = new BrandForm();
+            brandForm.ShowDialog();
+        }
+
+        private void производителиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ManufacturerForm manufacturerForm = new ManufacturerForm(); 
+            manufacturerForm.ShowDialog();
+        }
+
+        private void клиентиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CustomerForm customerForm = new CustomerForm();
+            customerForm.ShowDialog();
+        }
+
+        private void поръчкиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OrderForm orderForm = new OrderForm();
+            orderForm.ShowDialog();
+        }
+
+        private void поръчкиКолиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OrderCarForm orderCarForm = new OrderCarForm();
+            orderCarForm.ShowDialog();
+        }
+
+        private void сравкиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QueryForm queryForm = new QueryForm();
+            queryForm.ShowDialog();
+        }
     }
 }
