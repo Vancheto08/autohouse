@@ -139,11 +139,11 @@
     <Compile Include="BrandForm.Designer.cs">
       <DependentUpon>BrandForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CarsForm.cs">
+    <Compile Include="CarForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CarsForm.Designer.cs">
-      <DependentUpon>CarsForm.cs</DependentUpon>
+    <Compile Include="CarForm.Designer.cs">
+      <DependentUpon>CarForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomerForm.cs">
       <SubType>Form</SubType>
@@ -174,8 +174,8 @@
     <EmbeddedResource Include="Autohouse.resx">
       <DependentUpon>Autohouse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CarsForm.resx">
-      <DependentUpon>CarsForm.cs</DependentUpon>
+    <EmbeddedResource Include="CarForm.resx">
+      <DependentUpon>CarForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

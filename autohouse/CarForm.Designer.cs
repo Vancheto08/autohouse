@@ -1,6 +1,6 @@
 ﻿namespace autohouse
 {
-    partial class CarsForm
+    partial class CarForm
     {
         /// <summary>
         /// Required designer variable.

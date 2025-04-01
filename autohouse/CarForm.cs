@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace autohouse
 {
-    public partial class CarsForm : Form
+    public partial class CarForm : Form
     {
-        public CarsForm()
+        public CarForm()
         {
             InitializeComponent();
         }

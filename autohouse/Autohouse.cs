@@ -19,7 +19,7 @@ namespace autohouse
 
         private void openCarsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CarsForm carsForm = new CarsForm();
+            CarForm carsForm = new CarForm();
             carsForm.ShowDialog();
         }
     }
