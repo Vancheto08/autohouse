@@ -42,6 +42,7 @@
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,6 +126,7 @@
             // 
             // dataGridViewCustomers
             // 
+            this.dataGridViewCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCustomers.Location = new System.Drawing.Point(434, 103);
             this.dataGridViewCustomers.Name = "dataGridViewCustomers";
@@ -140,6 +142,7 @@
             this.buttonInsert.TabIndex = 10;
             this.buttonInsert.Text = "Добави";
             this.buttonInsert.UseVisualStyleBackColor = true;
+            this.buttonInsert.Click += new System.EventHandler(this.buttonInsert_Click);
             // 
             // buttonUpdate
             // 
@@ -150,6 +153,7 @@
             this.buttonUpdate.TabIndex = 11;
             this.buttonUpdate.Text = "Промени";
             this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonDelete
             // 
@@ -160,6 +164,7 @@
             this.buttonDelete.TabIndex = 12;
             this.buttonDelete.Text = "Изтрий";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonBack
             // 
@@ -172,11 +177,24 @@
             this.buttonBack.UseVisualStyleBackColor = true;
             this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
+            // buttonSave
+            // 
+            this.buttonSave.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSave.Location = new System.Drawing.Point(164, 289);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(120, 39);
+            this.buttonSave.TabIndex = 14;
+            this.buttonSave.Text = "Запази";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Visible = false;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 405);
+            this.ClientSize = new System.Drawing.Size(922, 405);
+            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonUpdate);
@@ -216,5 +234,6 @@
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.Button buttonSave;
     }
 }
