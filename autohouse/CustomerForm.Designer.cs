@@ -164,7 +164,7 @@
             // buttonBack
             // 
             this.buttonBack.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonBack.Location = new System.Drawing.Point(716, 382);
+            this.buttonBack.Location = new System.Drawing.Point(716, 354);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(176, 35);
             this.buttonBack.TabIndex = 13;
@@ -175,7 +175,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(928, 442);
+            this.ClientSize = new System.Drawing.Size(928, 405);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonUpdate);
