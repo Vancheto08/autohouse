@@ -127,6 +127,7 @@
     <Compile Include="OrderBusiness.cs" />
     <Compile Include="OrderCarBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryBusiness.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

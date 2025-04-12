@@ -33,12 +33,13 @@
             this.labelCountry = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.textBoxCountry = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewManufacturer = new System.Windows.Forms.DataGridView();
             this.buttonInsert = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.buttonSave = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewManufacturer)).BeginInit();
             this.SuspendLayout();
             // 
             // labelManufacturer
@@ -87,15 +88,16 @@
             this.textBoxCountry.Size = new System.Drawing.Size(237, 38);
             this.textBoxCountry.TabIndex = 4;
             // 
-            // dataGridView1
+            // dataGridViewManufacturer
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(580, 132);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(379, 181);
-            this.dataGridView1.TabIndex = 5;
+            this.dataGridViewManufacturer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewManufacturer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewManufacturer.Location = new System.Drawing.Point(580, 132);
+            this.dataGridViewManufacturer.Name = "dataGridViewManufacturer";
+            this.dataGridViewManufacturer.RowHeadersWidth = 51;
+            this.dataGridViewManufacturer.RowTemplate.Height = 24;
+            this.dataGridViewManufacturer.Size = new System.Drawing.Size(379, 181);
+            this.dataGridViewManufacturer.TabIndex = 5;
             // 
             // buttonInsert
             // 
@@ -106,6 +108,7 @@
             this.buttonInsert.TabIndex = 6;
             this.buttonInsert.Text = "Добави";
             this.buttonInsert.UseVisualStyleBackColor = true;
+            this.buttonInsert.Click += new System.EventHandler(this.buttonInsert_Click);
             // 
             // buttonUpdate
             // 
@@ -116,6 +119,7 @@
             this.buttonUpdate.TabIndex = 7;
             this.buttonUpdate.Text = "Промени";
             this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonDelete
             // 
@@ -126,27 +130,41 @@
             this.buttonDelete.TabIndex = 8;
             this.buttonDelete.Text = "Изтрий";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonBack
             // 
             this.buttonBack.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBack.Location = new System.Drawing.Point(819, 392);
+            this.buttonBack.Location = new System.Drawing.Point(798, 392);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(171, 45);
+            this.buttonBack.Size = new System.Drawing.Size(192, 45);
             this.buttonBack.TabIndex = 9;
             this.buttonBack.Text = "Назад";
             this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSave.Location = new System.Drawing.Point(207, 392);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(171, 45);
+            this.buttonSave.TabIndex = 10;
+            this.buttonSave.Text = "Запази";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Visible = false;
             // 
             // ManufacturerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1037, 460);
+            this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonInsert);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewManufacturer);
             this.Controls.Add(this.textBoxCountry);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.labelCountry);
@@ -154,7 +172,8 @@
             this.Controls.Add(this.labelManufacturer);
             this.Name = "ManufacturerForm";
             this.Text = "ManufacturerForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ManufacturerForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewManufacturer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,10 +186,11 @@
         private System.Windows.Forms.Label labelCountry;
         private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.TextBox textBoxCountry;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewManufacturer;
         private System.Windows.Forms.Button buttonInsert;
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonBack;
+        private System.Windows.Forms.Button buttonSave;
     }
 }

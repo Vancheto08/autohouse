@@ -140,10 +140,6 @@
     <Analyzer Include="..\packages\NUnit.Analyzers.4.6.0\analyzers\dotnet\cs\nunit.analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\autohouse\autohouse.csproj">
-      <Project>{26370113-e546-4305-8731-6d384850cc6b}</Project>
-      <Name>autohouse</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Business\Business.csproj">
       <Project>{dc04999c-edd5-4d3a-be78-8a4a7f9239b3}</Project>
       <Name>Business</Name>
