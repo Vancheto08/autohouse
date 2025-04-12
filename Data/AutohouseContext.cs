@@ -19,8 +19,6 @@ namespace Data
         {
             modelBuilder.Entity<Order_Car>()
                 .HasKey(oc => new { oc.OrderId, oc.CarId });
-
-                
             base.OnModelCreating(modelBuilder);
         }
         public DbSet<Brand> Brands { get; set; }

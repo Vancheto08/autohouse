@@ -36,10 +36,19 @@ namespace autohouse
             brand.ManufacturerId = manufacturerId;
 
             brandBusiness.Add(brand);
+            UpdateGrid();
             ClearTextBoxes();
 
         }
-
+        private void UpdateGrid()
+        {
+            dataGridViewBrands.DataSource = brandBusiness.GetAll();
+            dataGridViewBrands.ReadOnly = true;
+            dataGridViewBrands.Columns["BrandId"].Visible = false;
+            dataGridViewBrands.Columns["Cars"].Visible = false;
+            dataGridViewBrands.Columns["Manufacturer"].Visible = false;
+            dataGridViewBrands.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
         private void BrandForm_Load(object sender, EventArgs e)
         {
             brands = brandBusiness.GetAll();
@@ -59,8 +68,8 @@ namespace autohouse
             comboBoxManufacturer.DataSource = manufacturers;
             comboBoxManufacturer.DisplayMember = "Name";
             comboBoxManufacturer.ValueMember = "ManufacturerId";
-            Binding bindingManufacturer = new Binding("Text", brands, "ManufacturerId");
-            comboBoxManufacturer.DataBindings.Add(bindingManufacturer);
+          // Binding bindingManufacturer = new Binding("Text", brands, "ManufacturerId");
+           // comboBoxManufacturer.DataBindings.Add(bindingManufacturer);
 
 
         }
@@ -73,6 +82,11 @@ namespace autohouse
         {
             textBoxName.Text = "";
             comboBoxManufacturer.Text = "";
+        }
+
+        private void dataGridViewBrands_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
