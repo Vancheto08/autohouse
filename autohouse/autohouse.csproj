@@ -180,6 +180,9 @@
     <EmbeddedResource Include="Autohouse.resx">
       <DependentUpon>Autohouse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BrandForm.resx">
+      <DependentUpon>BrandForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CarForm.resx">
       <DependentUpon>CarForm.cs</DependentUpon>
     </EmbeddedResource>
