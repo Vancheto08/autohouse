@@ -11,5 +11,6 @@ namespace Data.Models
         public int ManufacturerId { get; set; }
         public string Name { get; set; }
         public string Country {  get; set; }
+        public ICollection<Brand> Brands { get; set; }
     }
 }

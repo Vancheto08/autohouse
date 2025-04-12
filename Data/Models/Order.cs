@@ -14,5 +14,7 @@ namespace Data.Models
         public DateTime OrderDate {  get; set; }
         public string PaymentMethod {  get; set; }
         public string ShippingAddress {  get; set; }
+        public ICollection<Order_Car> Order_Cars { get; set; }
+
     }
 }

@@ -42,8 +42,8 @@ namespace Business
         {
             using (autohouseContext = new AutohouseContext())
             {
-               var item = autohouseContext.Orders_Cars.Find(order_Car.CarId);
-                //var item = autohouseContext.Orders_Cars.Find(order_Car.OrderId);
+               var item = autohouseContext.Orders_Cars.Find( order_Car.OrderId, order_Car.CarId);
+              
                 if (item != null)
                 {
                     autohouseContext.Entry(item).CurrentValues.SetValues(order_Car);
@@ -52,11 +52,11 @@ namespace Business
             }
         }
 
-        public void Delete(int id)
+        public void Delete( int carId, int orderId)
         {
             using (autohouseContext = new AutohouseContext())
             {
-                var item = autohouseContext.Orders_Cars.Find(id);
+                var item = autohouseContext.Orders_Cars.Find(orderId,carId);
                 if (item != null)
                 {
                     autohouseContext.Orders_Cars.Remove(item);

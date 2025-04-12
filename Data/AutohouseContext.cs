@@ -14,6 +14,15 @@ namespace Data
         {
 
         }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Order_Car>()
+                .HasKey(oc => new { oc.OrderId, oc.CarId });
+
+                
+            base.OnModelCreating(modelBuilder);
+        }
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Car> Cars { get; set; }
         public DbSet<Customer> Customers { get; set; }
