@@ -216,6 +216,10 @@
     <Analyzer Include="..\packages\NUnit.Analyzers.4.6.0\analyzers\dotnet\cs\nunit.analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{dc04999c-edd5-4d3a-be78-8a4a7f9239b3}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Data\Data.csproj">
       <Project>{d9890492-ac69-4fd1-ad18-98479bbc05d7}</Project>
       <Name>Data</Name>

@@ -37,12 +37,12 @@
             this.textBoxLastName = new System.Windows.Forms.TextBox();
             this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewCustomers = new System.Windows.Forms.DataGridView();
             this.buttonInsert = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomers)).BeginInit();
             this.SuspendLayout();
             // 
             // labelCustomer
@@ -123,13 +123,13 @@
             this.textBoxAddress.Size = new System.Drawing.Size(190, 20);
             this.textBoxAddress.TabIndex = 8;
             // 
-            // dataGridView1
+            // dataGridViewCustomers
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(434, 103);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(472, 165);
-            this.dataGridView1.TabIndex = 9;
+            this.dataGridViewCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCustomers.Location = new System.Drawing.Point(434, 103);
+            this.dataGridViewCustomers.Name = "dataGridViewCustomers";
+            this.dataGridViewCustomers.Size = new System.Drawing.Size(472, 165);
+            this.dataGridViewCustomers.TabIndex = 9;
             // 
             // buttonInsert
             // 
@@ -170,6 +170,7 @@
             this.buttonBack.TabIndex = 13;
             this.buttonBack.Text = "Назад";
             this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // CustomerForm
             // 
@@ -180,7 +181,7 @@
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonInsert);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewCustomers);
             this.Controls.Add(this.textBoxAddress);
             this.Controls.Add(this.textBoxPhoneNumber);
             this.Controls.Add(this.textBoxLastName);
@@ -192,7 +193,8 @@
             this.Controls.Add(this.labelCustomer);
             this.Name = "CustomerForm";
             this.Text = "CustomerForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.CustomerForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,7 +211,7 @@
         private System.Windows.Forms.TextBox textBoxLastName;
         private System.Windows.Forms.TextBox textBoxPhoneNumber;
         private System.Windows.Forms.TextBox textBoxAddress;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewCustomers;
         private System.Windows.Forms.Button buttonInsert;
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonDelete;
