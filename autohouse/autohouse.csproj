@@ -183,6 +183,9 @@
     <EmbeddedResource Include="CarForm.resx">
       <DependentUpon>CarForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManufacturerForm.resx">
+      <DependentUpon>ManufacturerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
