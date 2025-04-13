@@ -29,10 +29,9 @@ namespace autohouse
             dataGridViewCars.Columns["CarId"].Visible = false;
             dataGridViewCars.Columns["Brand"].Visible = false;
             //dataGridViewCars.Columns["BrandId"].Visible = false;
-            dataGridViewCars.Columns["Cars"].Visible = false;
 
             dataGridViewBrand.DataSource = brands;
-            //dataGridViewBrand.Columns["BrandId"].Visible = false;
+            dataGridViewBrand.Columns["BrandId"].Visible = true;
             dataGridViewBrand.Columns["Cars"].Visible = false;
             dataGridViewBrand.Columns["Manufacturer"].Visible = false;
 
@@ -124,8 +123,8 @@ namespace autohouse
             int brandId = int.Parse(dataGridViewCars.SelectedRows[0].Cells["BrandId"].Value.ToString());
             comboBoxBrand.SelectedValue = brandId;
             textBoxPrice.Text = dataGridViewCars.SelectedRows[0].Cells["Price"].Value.ToString();
-            textBoxPublicationYear.Text = dataGridViewCars.SelectedRows[1].Cells["PublicationYear"].Value.ToString();
-            textBoxQuantity.Text = dataGridViewCars.SelectedRows[2].Cells["Quantity"].Value.ToString();
+            textBoxPublicationYear.Text = dataGridViewCars.SelectedRows[0].Cells["PublicationYear"].Value.ToString();
+            textBoxQuantity.Text = dataGridViewCars.SelectedRows[0].Cells["Quantity"].Value.ToString();
         }
         private Car GetEditedCars()
         {
@@ -150,6 +149,7 @@ namespace autohouse
             UpdateGrid();
             ResetSelect();
             ToggleSaveUpdate();
+            ClearTextBoxes();
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
@@ -161,6 +161,7 @@ namespace autohouse
                 carBusiness.Delete(id);
                 UpdateGrid();
                 ResetSelect();
+                ClearTextBoxes();
             }
         }
     }

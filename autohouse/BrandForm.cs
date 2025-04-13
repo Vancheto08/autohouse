@@ -105,7 +105,6 @@ namespace autohouse
         private void DisableSelect()
         {
             dataGridViewBrands.Enabled = false;
-            //dataGridViewManufacturers.Enabled = false;
         }
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
@@ -152,6 +151,7 @@ namespace autohouse
             UpdateGrid();
             ResetSelect();
             ToggleSaveUpdate();
+            ClearTextBoxes();
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
@@ -163,6 +163,7 @@ namespace autohouse
                 brandBusiness.Delete(id);
                 UpdateGrid();
                 ResetSelect();
+                ClearTextBoxes();
             }
         }
     }
