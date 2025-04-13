@@ -146,9 +146,9 @@
             // buttonSave
             // 
             this.buttonSave.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSave.Location = new System.Drawing.Point(143, 348);
+            this.buttonSave.Location = new System.Drawing.Point(143, 306);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(114, 39);
+            this.buttonSave.Size = new System.Drawing.Size(114, 36);
             this.buttonSave.TabIndex = 10;
             this.buttonSave.Text = "Запази";
             this.buttonSave.UseVisualStyleBackColor = true;
