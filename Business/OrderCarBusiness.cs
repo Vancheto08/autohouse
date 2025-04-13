@@ -13,7 +13,7 @@ namespace Business
     {
         private AutohouseContext autohouseContext;
 
-        public List<Order_Car> GetAll(int id)
+        public List<Order_Car> GetAll()
         {
             using (autohouseContext = new AutohouseContext())
             {
@@ -21,11 +21,22 @@ namespace Business
             }
         }
 
-        public Order_Car Get(int id)
+        public List<CarBrand> GetAllCarBrand()
         {
             using (autohouseContext = new AutohouseContext())
             {
-                return autohouseContext.Orders_Cars.Find(id);
+                return autohouseContext.Cars.Select(x => new CarBrand { Id = x.CarId, 
+                    BrandName= x.Brand.Name, Price= x.Price, PublicationYear= x.PublicationYear, 
+                    Quantity=x.Quantity }).ToList();
+            }
+        }
+        
+
+        public Order_Car Get(int orderId, int carId)
+        {
+            using (autohouseContext = new AutohouseContext())
+            {
+                return autohouseContext.Orders_Cars.Find(orderId, carId);
             }
         }
 
@@ -52,7 +63,7 @@ namespace Business
             }
         }
 
-        public void Delete( int carId, int orderId)
+        public void Delete( int orderId, int carId )
         {
             using (autohouseContext = new AutohouseContext())
             {
@@ -65,5 +76,14 @@ namespace Business
 
             }
         }
+
+    }
+    public class CarBrand
+    {
+        public int Id { get; set; }
+        public string BrandName { get; set; }
+        public decimal Price { get; set; }
+        public int PublicationYear { get; set; }
+        public int Quantity { get; set; }
     }
 }

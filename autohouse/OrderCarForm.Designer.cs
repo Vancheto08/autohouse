@@ -32,152 +32,210 @@
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
-            this.dataGridViewOrderCar = new System.Windows.Forms.DataGridView();
-            this.dataGridViewCustomer = new System.Windows.Forms.DataGridView();
+            this.dataGridViewOrderCars = new System.Windows.Forms.DataGridView();
+            this.dataGridViewCars = new System.Windows.Forms.DataGridView();
             this.buttonBack = new System.Windows.Forms.Button();
-            this.dataGridViewOrder = new System.Windows.Forms.DataGridView();
+            this.dataGridViewOrders = new System.Windows.Forms.DataGridView();
             this.labelQuantity = new System.Windows.Forms.Label();
             this.labelOrderId = new System.Windows.Forms.Label();
             this.labelCarId = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderCar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomer)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).BeginInit();
+            this.comboBoxOrderId = new System.Windows.Forms.ComboBox();
+            this.comboBoxCarId = new System.Windows.Forms.ComboBox();
+            this.textBoxQuantity = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderCars)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCars)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrders)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonInsert
             // 
-            this.buttonInsert.Location = new System.Drawing.Point(89, 316);
+            this.buttonInsert.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonInsert.Location = new System.Drawing.Point(69, 293);
+            this.buttonInsert.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInsert.Name = "buttonInsert";
-            this.buttonInsert.Size = new System.Drawing.Size(75, 23);
+            this.buttonInsert.Size = new System.Drawing.Size(125, 36);
             this.buttonInsert.TabIndex = 0;
             this.buttonInsert.Text = "Добави";
             this.buttonInsert.UseVisualStyleBackColor = true;
+            this.buttonInsert.Click += new System.EventHandler(this.buttonInsert_Click);
             // 
             // buttonUpdate
             // 
-            this.buttonUpdate.Location = new System.Drawing.Point(170, 316);
+            this.buttonUpdate.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonUpdate.Location = new System.Drawing.Point(202, 293);
+            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(75, 23);
+            this.buttonUpdate.Size = new System.Drawing.Size(118, 36);
             this.buttonUpdate.TabIndex = 1;
             this.buttonUpdate.Text = "Промени";
             this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(170, 361);
+            this.buttonSave.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonSave.Location = new System.Drawing.Point(202, 293);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(75, 23);
+            this.buttonSave.Size = new System.Drawing.Size(118, 33);
             this.buttonSave.TabIndex = 2;
             this.buttonSave.Text = "Запази";
             this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(251, 316);
+            this.buttonDelete.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonDelete.Location = new System.Drawing.Point(329, 293);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(75, 23);
+            this.buttonDelete.Size = new System.Drawing.Size(125, 36);
             this.buttonDelete.TabIndex = 3;
             this.buttonDelete.Text = "Изтрий";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
-            // dataGridViewOrderCar
+            // dataGridViewOrderCars
             // 
-            this.dataGridViewOrderCar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOrderCar.Location = new System.Drawing.Point(500, 24);
-            this.dataGridViewOrderCar.Name = "dataGridViewOrderCar";
-            this.dataGridViewOrderCar.RowHeadersWidth = 51;
-            this.dataGridViewOrderCar.RowTemplate.Height = 24;
-            this.dataGridViewOrderCar.Size = new System.Drawing.Size(240, 150);
-            this.dataGridViewOrderCar.TabIndex = 4;
+            this.dataGridViewOrderCars.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewOrderCars.Location = new System.Drawing.Point(567, 71);
+            this.dataGridViewOrderCars.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewOrderCars.Name = "dataGridViewOrderCars";
+            this.dataGridViewOrderCars.RowHeadersWidth = 51;
+            this.dataGridViewOrderCars.RowTemplate.Height = 24;
+            this.dataGridViewOrderCars.Size = new System.Drawing.Size(391, 122);
+            this.dataGridViewOrderCars.TabIndex = 4;
+            this.dataGridViewOrderCars.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewOrderCars_CellClick);
             // 
-            // dataGridViewCustomer
+            // dataGridViewCars
             // 
-            this.dataGridViewCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCustomer.Location = new System.Drawing.Point(500, 214);
-            this.dataGridViewCustomer.Name = "dataGridViewCustomer";
-            this.dataGridViewCustomer.RowHeadersWidth = 51;
-            this.dataGridViewCustomer.RowTemplate.Height = 24;
-            this.dataGridViewCustomer.Size = new System.Drawing.Size(240, 150);
-            this.dataGridViewCustomer.TabIndex = 5;
+            this.dataGridViewCars.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewCars.Location = new System.Drawing.Point(567, 349);
+            this.dataGridViewCars.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewCars.Name = "dataGridViewCars";
+            this.dataGridViewCars.RowHeadersWidth = 51;
+            this.dataGridViewCars.RowTemplate.Height = 24;
+            this.dataGridViewCars.Size = new System.Drawing.Size(391, 122);
+            this.dataGridViewCars.TabIndex = 5;
             // 
             // buttonBack
             // 
-            this.buttonBack.Location = new System.Drawing.Point(819, 549);
+            this.buttonBack.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonBack.Location = new System.Drawing.Point(845, 484);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(75, 23);
+            this.buttonBack.Size = new System.Drawing.Size(113, 34);
             this.buttonBack.TabIndex = 6;
             this.buttonBack.Text = "Назад";
             this.buttonBack.UseVisualStyleBackColor = true;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
-            // dataGridViewOrder
+            // dataGridViewOrders
             // 
-            this.dataGridViewOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOrder.Location = new System.Drawing.Point(500, 396);
-            this.dataGridViewOrder.Name = "dataGridViewOrder";
-            this.dataGridViewOrder.RowHeadersWidth = 51;
-            this.dataGridViewOrder.RowTemplate.Height = 24;
-            this.dataGridViewOrder.Size = new System.Drawing.Size(240, 150);
-            this.dataGridViewOrder.TabIndex = 7;
+            this.dataGridViewOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewOrders.Location = new System.Drawing.Point(567, 207);
+            this.dataGridViewOrders.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewOrders.Name = "dataGridViewOrders";
+            this.dataGridViewOrders.RowHeadersWidth = 51;
+            this.dataGridViewOrders.RowTemplate.Height = 24;
+            this.dataGridViewOrders.Size = new System.Drawing.Size(391, 122);
+            this.dataGridViewOrders.TabIndex = 7;
             // 
             // labelQuantity
             // 
             this.labelQuantity.AutoSize = true;
-            this.labelQuantity.Location = new System.Drawing.Point(43, 129);
+            this.labelQuantity.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelQuantity.Location = new System.Drawing.Point(197, 109);
+            this.labelQuantity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelQuantity.Name = "labelQuantity";
-            this.labelQuantity.Size = new System.Drawing.Size(88, 16);
+            this.labelQuantity.Size = new System.Drawing.Size(142, 25);
             this.labelQuantity.TabIndex = 8;
             this.labelQuantity.Text = "Количество:";
             // 
             // labelOrderId
             // 
             this.labelOrderId.AutoSize = true;
-            this.labelOrderId.Location = new System.Drawing.Point(43, 195);
+            this.labelOrderId.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelOrderId.Location = new System.Drawing.Point(32, 158);
+            this.labelOrderId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelOrderId.Name = "labelOrderId";
-            this.labelOrderId.Size = new System.Drawing.Size(44, 16);
+            this.labelOrderId.Size = new System.Drawing.Size(307, 25);
             this.labelOrderId.TabIndex = 9;
-            this.labelOrderId.Text = "label2";
+            this.labelOrderId.Text = "Идентификатор на поръчка:";
             // 
             // labelCarId
             // 
             this.labelCarId.AutoSize = true;
-            this.labelCarId.Location = new System.Drawing.Point(43, 271);
+            this.labelCarId.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCarId.Location = new System.Drawing.Point(67, 220);
+            this.labelCarId.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCarId.Name = "labelCarId";
-            this.labelCarId.Size = new System.Drawing.Size(44, 16);
+            this.labelCarId.Size = new System.Drawing.Size(272, 25);
             this.labelCarId.TabIndex = 10;
-            this.labelCarId.Text = "label3";
+            this.labelCarId.Text = "Идентификатор на кола:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(337, 35);
+            this.label4.Font = new System.Drawing.Font("Georgia", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(303, 27);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 16);
+            this.label4.Size = new System.Drawing.Size(249, 34);
             this.label4.TabIndex = 11;
             this.label4.Text = "Поръчки на коли";
             // 
+            // comboBoxOrderId
+            // 
+            this.comboBoxOrderId.FormattingEnabled = true;
+            this.comboBoxOrderId.Location = new System.Drawing.Point(344, 162);
+            this.comboBoxOrderId.Name = "comboBoxOrderId";
+            this.comboBoxOrderId.Size = new System.Drawing.Size(135, 21);
+            this.comboBoxOrderId.TabIndex = 12;
+            // 
+            // comboBoxCarId
+            // 
+            this.comboBoxCarId.FormattingEnabled = true;
+            this.comboBoxCarId.Location = new System.Drawing.Point(344, 226);
+            this.comboBoxCarId.Name = "comboBoxCarId";
+            this.comboBoxCarId.Size = new System.Drawing.Size(135, 21);
+            this.comboBoxCarId.TabIndex = 13;
+            // 
+            // textBoxQuantity
+            // 
+            this.textBoxQuantity.Location = new System.Drawing.Point(344, 109);
+            this.textBoxQuantity.Name = "textBoxQuantity";
+            this.textBoxQuantity.Size = new System.Drawing.Size(135, 20);
+            this.textBoxQuantity.TabIndex = 14;
+            // 
             // OrderCarForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1011, 624);
+            this.ClientSize = new System.Drawing.Size(986, 529);
+            this.Controls.Add(this.textBoxQuantity);
+            this.Controls.Add(this.comboBoxCarId);
+            this.Controls.Add(this.comboBoxOrderId);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.labelCarId);
             this.Controls.Add(this.labelOrderId);
             this.Controls.Add(this.labelQuantity);
-            this.Controls.Add(this.dataGridViewOrder);
+            this.Controls.Add(this.dataGridViewOrders);
             this.Controls.Add(this.buttonBack);
-            this.Controls.Add(this.dataGridViewCustomer);
-            this.Controls.Add(this.dataGridViewOrderCar);
+            this.Controls.Add(this.dataGridViewCars);
+            this.Controls.Add(this.dataGridViewOrderCars);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.buttonInsert);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OrderCarForm";
             this.Text = "OrderCarForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderCar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrder)).EndInit();
+            this.Load += new System.EventHandler(this.OrderCarForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrderCars)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCars)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOrders)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,13 +247,16 @@
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonDelete;
-        private System.Windows.Forms.DataGridView dataGridViewOrderCar;
-        private System.Windows.Forms.DataGridView dataGridViewCustomer;
+        private System.Windows.Forms.DataGridView dataGridViewOrderCars;
+        private System.Windows.Forms.DataGridView dataGridViewCars;
         private System.Windows.Forms.Button buttonBack;
-        private System.Windows.Forms.DataGridView dataGridViewOrder;
+        private System.Windows.Forms.DataGridView dataGridViewOrders;
         private System.Windows.Forms.Label labelQuantity;
         private System.Windows.Forms.Label labelOrderId;
         private System.Windows.Forms.Label labelCarId;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBoxOrderId;
+        private System.Windows.Forms.ComboBox comboBoxCarId;
+        private System.Windows.Forms.TextBox textBoxQuantity;
     }
 }
