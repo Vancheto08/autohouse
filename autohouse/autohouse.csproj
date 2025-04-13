@@ -195,6 +195,9 @@
     <EmbeddedResource Include="OrderCarForm.resx">
       <DependentUpon>OrderCarForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

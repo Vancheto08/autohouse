@@ -133,6 +133,7 @@ namespace autohouse
             UpdateGrid();
             ResetSelect();
             ToggleSaveUpdate();
+            ClearTextBoxes();
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
@@ -144,6 +145,7 @@ namespace autohouse
                 customerBusiness.Delete(id);
                 UpdateGrid();
                 ResetSelect();
+                ClearTextBoxes();
             }
         }
     }
