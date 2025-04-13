@@ -64,12 +64,11 @@ namespace autohouse
             //dataGridView2.Columns["ManufacturerId"].Visible = false;
             dataGridViewManufacturers.Columns["Brands"].Visible = false;
 
-
+            //Binding bindingManufacturer = new Binding("Text", brands, "ManufacturerId");
+            //comboBoxManufacturer.DataBindings.Add(bindingManufacturer);
             comboBoxManufacturer.DataSource = manufacturers;
             comboBoxManufacturer.DisplayMember = "Name";
             comboBoxManufacturer.ValueMember = "ManufacturerId";
-          // Binding bindingManufacturer = new Binding("Text", brands, "ManufacturerId");
-           // comboBoxManufacturer.DataBindings.Add(bindingManufacturer);
 
 
         }
@@ -84,9 +83,18 @@ namespace autohouse
             comboBoxManufacturer.Text = "";
         }
 
-        private void dataGridViewBrands_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void buttonUpdate_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridViewBrands_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridViewBrands.CurrentRow.Selected = true;
+           
+            int manufacturerId =int.Parse( dataGridViewBrands.SelectedRows[0].Cells["ManufacturerId"].Value.ToString());
+            comboBoxManufacturer.SelectedValue= manufacturerId;
+            textBoxName.Text = dataGridViewBrands.SelectedRows[0].Cells["Name"].Value.ToString();
         }
     }
 }

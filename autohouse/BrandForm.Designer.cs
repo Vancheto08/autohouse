@@ -48,10 +48,9 @@
             // 
             this.labelBrand.AutoSize = true;
             this.labelBrand.Font = new System.Drawing.Font("Georgia", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelBrand.Location = new System.Drawing.Point(429, 65);
-            this.labelBrand.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelBrand.Location = new System.Drawing.Point(322, 53);
             this.labelBrand.Name = "labelBrand";
-            this.labelBrand.Size = new System.Drawing.Size(136, 43);
+            this.labelBrand.Size = new System.Drawing.Size(109, 34);
             this.labelBrand.TabIndex = 0;
             this.labelBrand.Text = "Марки";
             // 
@@ -59,60 +58,54 @@
             // 
             this.dataGridViewBrands.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewBrands.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBrands.Location = new System.Drawing.Point(536, 142);
-            this.dataGridViewBrands.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewBrands.Location = new System.Drawing.Point(402, 115);
             this.dataGridViewBrands.Name = "dataGridViewBrands";
             this.dataGridViewBrands.RowHeadersWidth = 51;
-            this.dataGridViewBrands.Size = new System.Drawing.Size(567, 143);
+            this.dataGridViewBrands.Size = new System.Drawing.Size(425, 126);
             this.dataGridViewBrands.TabIndex = 1;
-            this.dataGridViewBrands.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBrands_CellContentClick);
+            this.dataGridViewBrands.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBrands_CellClick);
             // 
             // labelName
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelName.Location = new System.Drawing.Point(139, 169);
-            this.labelName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelName.Location = new System.Drawing.Point(104, 137);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(79, 31);
+            this.labelName.Size = new System.Drawing.Size(63, 25);
             this.labelName.TabIndex = 2;
             this.labelName.Text = "Име:";
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(231, 176);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxName.Location = new System.Drawing.Point(173, 143);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(224, 22);
+            this.textBoxName.Size = new System.Drawing.Size(169, 20);
             this.textBoxName.TabIndex = 3;
             // 
             // comboBoxManufacturer
             // 
             this.comboBoxManufacturer.FormattingEnabled = true;
-            this.comboBoxManufacturer.Location = new System.Drawing.Point(231, 258);
-            this.comboBoxManufacturer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxManufacturer.Location = new System.Drawing.Point(173, 210);
             this.comboBoxManufacturer.Name = "comboBoxManufacturer";
-            this.comboBoxManufacturer.Size = new System.Drawing.Size(224, 24);
+            this.comboBoxManufacturer.Size = new System.Drawing.Size(169, 21);
             this.comboBoxManufacturer.TabIndex = 4;
             // 
             // labelManufacturer
             // 
             this.labelManufacturer.AutoSize = true;
             this.labelManufacturer.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelManufacturer.Location = new System.Drawing.Point(0, 251);
-            this.labelManufacturer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelManufacturer.Location = new System.Drawing.Point(0, 204);
             this.labelManufacturer.Name = "labelManufacturer";
-            this.labelManufacturer.Size = new System.Drawing.Size(217, 31);
+            this.labelManufacturer.Size = new System.Drawing.Size(167, 25);
             this.labelManufacturer.TabIndex = 5;
             this.labelManufacturer.Text = "Производител:";
             // 
             // buttonInsert
             // 
             this.buttonInsert.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonInsert.Location = new System.Drawing.Point(13, 377);
-            this.buttonInsert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonInsert.Location = new System.Drawing.Point(31, 306);
             this.buttonInsert.Name = "buttonInsert";
-            this.buttonInsert.Size = new System.Drawing.Size(141, 44);
+            this.buttonInsert.Size = new System.Drawing.Size(106, 36);
             this.buttonInsert.TabIndex = 6;
             this.buttonInsert.Text = "Добави";
             this.buttonInsert.UseVisualStyleBackColor = true;
@@ -122,31 +115,29 @@
             // 
             this.dataGridViewManufacturers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewManufacturers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewManufacturers.Location = new System.Drawing.Point(536, 318);
-            this.dataGridViewManufacturers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewManufacturers.Location = new System.Drawing.Point(402, 258);
             this.dataGridViewManufacturers.Name = "dataGridViewManufacturers";
             this.dataGridViewManufacturers.RowHeadersWidth = 51;
-            this.dataGridViewManufacturers.Size = new System.Drawing.Size(567, 159);
+            this.dataGridViewManufacturers.Size = new System.Drawing.Size(425, 129);
             this.dataGridViewManufacturers.TabIndex = 7;
             // 
             // buttonUpdate
             // 
             this.buttonUpdate.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonUpdate.Location = new System.Drawing.Point(191, 377);
-            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonUpdate.Location = new System.Drawing.Point(143, 306);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(152, 44);
+            this.buttonUpdate.Size = new System.Drawing.Size(114, 36);
             this.buttonUpdate.TabIndex = 8;
             this.buttonUpdate.Text = "Промени";
             this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonDelete
             // 
             this.buttonDelete.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDelete.Location = new System.Drawing.Point(351, 377);
-            this.buttonDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonDelete.Location = new System.Drawing.Point(263, 306);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(156, 44);
+            this.buttonDelete.Size = new System.Drawing.Size(117, 36);
             this.buttonDelete.TabIndex = 9;
             this.buttonDelete.Text = "Изтрий";
             this.buttonDelete.UseVisualStyleBackColor = true;
@@ -154,10 +145,9 @@
             // buttonSave
             // 
             this.buttonSave.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSave.Location = new System.Drawing.Point(191, 428);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSave.Location = new System.Drawing.Point(143, 348);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(152, 48);
+            this.buttonSave.Size = new System.Drawing.Size(114, 39);
             this.buttonSave.TabIndex = 10;
             this.buttonSave.Text = "Запази";
             this.buttonSave.UseVisualStyleBackColor = true;
@@ -165,10 +155,9 @@
             // buttonBack
             // 
             this.buttonBack.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonBack.Location = new System.Drawing.Point(933, 495);
-            this.buttonBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonBack.Location = new System.Drawing.Point(700, 402);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(169, 44);
+            this.buttonBack.Size = new System.Drawing.Size(127, 36);
             this.buttonBack.TabIndex = 11;
             this.buttonBack.Text = "Назад";
             this.buttonBack.UseVisualStyleBackColor = true;
@@ -176,9 +165,9 @@
             // 
             // BrandForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1119, 554);
+            this.ClientSize = new System.Drawing.Size(839, 450);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonDelete);
@@ -191,7 +180,6 @@
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.dataGridViewBrands);
             this.Controls.Add(this.labelBrand);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "BrandForm";
             this.Text = "BrandForm";
             this.Load += new System.EventHandler(this.BrandForm_Load);
