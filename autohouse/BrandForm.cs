@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,6 +19,7 @@ namespace autohouse
         private ManufacturerBusiness manufacturerBusiness;
         private List<Manufacturer> manufacturers;
         private List<Brand> brands;
+        private int editId = 0;
 
         public BrandForm()
         {
@@ -82,19 +84,86 @@ namespace autohouse
             textBoxName.Text = "";
             comboBoxManufacturer.Text = "";
         }
-
+        private void UpdateTextBoxes(int id)
+        {
+            Brand update = brandBusiness.Get(id);
+            textBoxName.Text = update.Name;
+        }
+        private void ToggleSaveUpdate()
+        {
+            if (buttonUpdate.Visible)
+            {
+                buttonSave.Visible = true;
+                buttonUpdate.Visible = false;
+            }
+            else
+            {
+                buttonSave.Visible = false;
+                buttonUpdate.Visible = true;
+            }
+        }
+        private void DisableSelect()
+        {
+            dataGridViewBrands.Enabled = false;
+            //dataGridViewManufacturers.Enabled = false;
+        }
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-
+            if (dataGridViewBrands.SelectedRows.Count > 0)
+            {
+                var item = dataGridViewBrands.SelectedRows[0].Cells;
+                var id = int.Parse(item[0].Value.ToString());
+                editId = id;
+                UpdateTextBoxes(id);
+                ToggleSaveUpdate();
+                DisableSelect();
+            }
         }
 
         private void dataGridViewBrands_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             dataGridViewBrands.CurrentRow.Selected = true;
-           
-            int manufacturerId =int.Parse( dataGridViewBrands.SelectedRows[0].Cells["ManufacturerId"].Value.ToString());
-            comboBoxManufacturer.SelectedValue= manufacturerId;
+
+            int manufacturerId = int.Parse(dataGridViewBrands.SelectedRows[0].Cells["ManufacturerId"].Value.ToString());
+            comboBoxManufacturer.SelectedValue = manufacturerId;
             textBoxName.Text = dataGridViewBrands.SelectedRows[0].Cells["Name"].Value.ToString();
+        }
+        private Brand GetEditedBrands()
+        {
+            Brand brand = new Brand();
+            brand.BrandId = editId;
+
+            var name = textBoxName.Text;
+            brand.Name = name;
+            brand.ManufacturerId = int.Parse(comboBoxManufacturer.SelectedValue.ToString());
+
+            return brand;
+        }
+        private void ResetSelect()
+        {
+            dataGridViewBrands.ClearSelection();
+            dataGridViewBrands.Enabled = true;
+        }
+
+        private void buttonSave_Click(object sender, EventArgs e)
+        {
+            Brand editedBrand = GetEditedBrands();
+            brandBusiness.Update(editedBrand);
+            UpdateGrid();
+            ResetSelect();
+            ToggleSaveUpdate();
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewBrands.SelectedRows.Count > 0)
+            {
+                var item = dataGridViewBrands.SelectedRows[0].Cells;
+                var id = int.Parse(item[0].Value.ToString());
+                brandBusiness.Delete(id);
+                UpdateGrid();
+                ResetSelect();
+            }
         }
     }
 }

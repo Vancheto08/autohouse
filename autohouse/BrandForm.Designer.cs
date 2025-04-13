@@ -141,6 +141,7 @@
             this.buttonDelete.TabIndex = 9;
             this.buttonDelete.Text = "Изтрий";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonSave
             // 
@@ -151,6 +152,8 @@
             this.buttonSave.TabIndex = 10;
             this.buttonSave.Text = "Запази";
             this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Visible = false;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonBack
             // 
