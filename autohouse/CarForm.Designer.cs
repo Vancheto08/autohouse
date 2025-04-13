@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.labelCar = new System.Windows.Forms.Label();
-            this.buttonInser = new System.Windows.Forms.Button();
+            this.buttonInsert = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
@@ -38,14 +38,14 @@
             this.labelPrice = new System.Windows.Forms.Label();
             this.labelYearOfmanufacture = new System.Windows.Forms.Label();
             this.labelQuantity = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxBrand = new System.Windows.Forms.ComboBox();
             this.labelBrandId = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.dataGridViewBrand = new System.Windows.Forms.DataGridView();
+            this.textBoxPrice = new System.Windows.Forms.TextBox();
+            this.textBoxQuantity = new System.Windows.Forms.TextBox();
+            this.textBoxPublicationYear = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCars)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBrand)).BeginInit();
             this.SuspendLayout();
             // 
             // labelCar
@@ -58,15 +58,15 @@
             this.labelCar.TabIndex = 0;
             this.labelCar.Text = "Коли";
             // 
-            // buttonInser
+            // buttonInsert
             // 
-            this.buttonInser.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInser.Location = new System.Drawing.Point(36, 336);
-            this.buttonInser.Name = "buttonInser";
-            this.buttonInser.Size = new System.Drawing.Size(153, 51);
-            this.buttonInser.TabIndex = 1;
-            this.buttonInser.Text = "Добави";
-            this.buttonInser.UseVisualStyleBackColor = true;
+            this.buttonInsert.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonInsert.Location = new System.Drawing.Point(36, 336);
+            this.buttonInsert.Name = "buttonInsert";
+            this.buttonInsert.Size = new System.Drawing.Size(153, 51);
+            this.buttonInsert.TabIndex = 1;
+            this.buttonInsert.Text = "Добави";
+            this.buttonInsert.UseVisualStyleBackColor = true;
             // 
             // buttonUpdate
             // 
@@ -97,6 +97,7 @@
             this.buttonSave.TabIndex = 4;
             this.buttonSave.Text = "Запази";
             this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Visible = false;
             // 
             // buttonBack
             // 
@@ -113,11 +114,11 @@
             // 
             this.dataGridViewCars.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCars.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCars.Location = new System.Drawing.Point(617, 74);
+            this.dataGridViewCars.Location = new System.Drawing.Point(575, 75);
             this.dataGridViewCars.Name = "dataGridViewCars";
             this.dataGridViewCars.RowHeadersWidth = 51;
             this.dataGridViewCars.RowTemplate.Height = 24;
-            this.dataGridViewCars.Size = new System.Drawing.Size(365, 188);
+            this.dataGridViewCars.Size = new System.Drawing.Size(480, 188);
             this.dataGridViewCars.TabIndex = 6;
             // 
             // labelPrice
@@ -150,13 +151,13 @@
             this.labelQuantity.TabIndex = 9;
             this.labelQuantity.Text = "Количество:";
             // 
-            // comboBox1
+            // comboBoxBrand
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(382, 193);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 10;
+            this.comboBoxBrand.FormattingEnabled = true;
+            this.comboBoxBrand.Location = new System.Drawing.Point(382, 193);
+            this.comboBoxBrand.Name = "comboBoxBrand";
+            this.comboBoxBrand.Size = new System.Drawing.Size(159, 24);
+            this.comboBoxBrand.TabIndex = 10;
             // 
             // labelBrandId
             // 
@@ -168,48 +169,49 @@
             this.labelBrandId.TabIndex = 11;
             this.labelBrandId.Text = "Марка:";
             // 
-            // dataGridView2
+            // dataGridViewBrand
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(617, 307);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(365, 168);
-            this.dataGridView2.TabIndex = 12;
+            this.dataGridViewBrand.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewBrand.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewBrand.Location = new System.Drawing.Point(575, 307);
+            this.dataGridViewBrand.Name = "dataGridViewBrand";
+            this.dataGridViewBrand.RowHeadersWidth = 51;
+            this.dataGridViewBrand.RowTemplate.Height = 24;
+            this.dataGridViewBrand.Size = new System.Drawing.Size(480, 168);
+            this.dataGridViewBrand.TabIndex = 12;
             // 
-            // textBox1
+            // textBoxPrice
             // 
-            this.textBox1.Location = new System.Drawing.Point(382, 146);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 13;
+            this.textBoxPrice.Location = new System.Drawing.Point(382, 146);
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.Size = new System.Drawing.Size(159, 22);
+            this.textBoxPrice.TabIndex = 13;
             // 
-            // textBox2
+            // textBoxQuantity
             // 
-            this.textBox2.Location = new System.Drawing.Point(382, 282);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 14;
+            this.textBoxQuantity.Location = new System.Drawing.Point(382, 282);
+            this.textBoxQuantity.Name = "textBoxQuantity";
+            this.textBoxQuantity.Size = new System.Drawing.Size(159, 22);
+            this.textBoxQuantity.TabIndex = 14;
             // 
-            // textBox3
+            // textBoxPublicationYear
             // 
-            this.textBox3.Location = new System.Drawing.Point(382, 240);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 15;
+            this.textBoxPublicationYear.Location = new System.Drawing.Point(382, 240);
+            this.textBoxPublicationYear.Name = "textBoxPublicationYear";
+            this.textBoxPublicationYear.Size = new System.Drawing.Size(159, 22);
+            this.textBoxPublicationYear.TabIndex = 15;
             // 
             // CarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.textBoxPublicationYear);
+            this.Controls.Add(this.textBoxQuantity);
+            this.Controls.Add(this.textBoxPrice);
+            this.Controls.Add(this.dataGridViewBrand);
             this.Controls.Add(this.labelBrandId);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxBrand);
             this.Controls.Add(this.labelQuantity);
             this.Controls.Add(this.labelYearOfmanufacture);
             this.Controls.Add(this.labelPrice);
@@ -218,14 +220,14 @@
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.buttonUpdate);
-            this.Controls.Add(this.buttonInser);
+            this.Controls.Add(this.buttonInsert);
             this.Controls.Add(this.labelCar);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CarForm";
             this.Text = "Коли";
             this.Load += new System.EventHandler(this.CarForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCars)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBrand)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,7 +236,7 @@
         #endregion
 
         private System.Windows.Forms.Label labelCar;
-        private System.Windows.Forms.Button buttonInser;
+        private System.Windows.Forms.Button buttonInsert;
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonSave;
@@ -243,11 +245,11 @@
         private System.Windows.Forms.Label labelPrice;
         private System.Windows.Forms.Label labelYearOfmanufacture;
         private System.Windows.Forms.Label labelQuantity;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxBrand;
         private System.Windows.Forms.Label labelBrandId;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DataGridView dataGridViewBrand;
+        private System.Windows.Forms.TextBox textBoxPrice;
+        private System.Windows.Forms.TextBox textBoxQuantity;
+        private System.Windows.Forms.TextBox textBoxPublicationYear;
     }
 }

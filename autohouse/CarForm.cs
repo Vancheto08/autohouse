@@ -28,7 +28,10 @@ namespace autohouse
         }
         private void ClearTextBoxes()
         {
-
+            textBoxPrice.Text = "";
+            textBoxPublicationYear.Text = "";
+            textBoxQuantity.Text = "";
+            comboBoxBrand.Text = "";
         }
         private void ToggleSaveUpdate()
         {
