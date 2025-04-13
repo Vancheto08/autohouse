@@ -61,43 +61,47 @@
             // buttonInsert
             // 
             this.buttonInsert.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInsert.Location = new System.Drawing.Point(36, 336);
+            this.buttonInsert.Location = new System.Drawing.Point(46, 360);
             this.buttonInsert.Name = "buttonInsert";
             this.buttonInsert.Size = new System.Drawing.Size(153, 51);
             this.buttonInsert.TabIndex = 1;
             this.buttonInsert.Text = "Добави";
             this.buttonInsert.UseVisualStyleBackColor = true;
+            this.buttonInsert.Click += new System.EventHandler(this.buttonInsert_Click);
             // 
             // buttonUpdate
             // 
             this.buttonUpdate.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdate.Location = new System.Drawing.Point(205, 336);
+            this.buttonUpdate.Location = new System.Drawing.Point(205, 360);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(153, 51);
             this.buttonUpdate.TabIndex = 2;
             this.buttonUpdate.Text = "Промени";
             this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonDelete
             // 
             this.buttonDelete.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.Location = new System.Drawing.Point(364, 336);
+            this.buttonDelete.Location = new System.Drawing.Point(364, 360);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(153, 51);
             this.buttonDelete.TabIndex = 3;
             this.buttonDelete.Text = "Изтрий";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonSave
             // 
             this.buttonSave.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSave.Location = new System.Drawing.Point(205, 424);
+            this.buttonSave.Location = new System.Drawing.Point(205, 360);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(133, 51);
+            this.buttonSave.Size = new System.Drawing.Size(153, 51);
             this.buttonSave.TabIndex = 4;
             this.buttonSave.Text = "Запази";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Visible = false;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonBack
             // 
@@ -120,6 +124,7 @@
             this.dataGridViewCars.RowTemplate.Height = 24;
             this.dataGridViewCars.Size = new System.Drawing.Size(480, 188);
             this.dataGridViewCars.TabIndex = 6;
+            this.dataGridViewCars.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCars_CellClick);
             // 
             // labelPrice
             // 
