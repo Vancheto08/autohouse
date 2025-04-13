@@ -100,7 +100,6 @@ namespace autohouse
         private void DisableSelect()
         {
             dataGridViewCars.Enabled = false;
-
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
