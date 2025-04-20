@@ -121,7 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutohouseContext.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="QueryData.cs" />
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\Car.cs" />
     <Compile Include="Models\Customer.cs" />

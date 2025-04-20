@@ -78,7 +78,7 @@
             this.buttonSave.Location = new System.Drawing.Point(202, 293);
             this.buttonSave.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(118, 33);
+            this.buttonSave.Size = new System.Drawing.Size(118, 36);
             this.buttonSave.TabIndex = 2;
             this.buttonSave.Text = "Запази";
             this.buttonSave.UseVisualStyleBackColor = true;
