@@ -49,5 +49,10 @@ namespace autohouse
         {
             dataGridViewResults.DataSource = queryBusiness.GetCarCountByManufacturer().ToList();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            QueryForm.ActiveForm.Close();
+        }
     }
 }
