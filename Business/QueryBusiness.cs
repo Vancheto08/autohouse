@@ -1,13 +1,8 @@
-﻿using Data;
-using Data.Models;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+using Data;
+using Data.Models;
 
 namespace Business
 {
@@ -69,7 +64,7 @@ namespace Business
         }
 
         //4
-        public ICollection<Car> getCarCountByManufacturer()
+        public ICollection<Car> GetCarCountByManufacturer()
         {
             using (AutohouseContext context = new AutohouseContext())
             {
