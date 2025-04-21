@@ -16,5 +16,10 @@ namespace autohouse
         {
             InitializeComponent();
         }
+
+        private void QueryForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
