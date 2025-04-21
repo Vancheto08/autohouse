@@ -57,7 +57,7 @@
             // 
             this.labelQuery.AutoSize = true;
             this.labelQuery.Font = new System.Drawing.Font("Georgia", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelQuery.Location = new System.Drawing.Point(274, 19);
+            this.labelQuery.Location = new System.Drawing.Point(363, 20);
             this.labelQuery.Name = "labelQuery";
             this.labelQuery.Size = new System.Drawing.Size(133, 34);
             this.labelQuery.TabIndex = 2;
@@ -66,10 +66,10 @@
             // buttonGetCardOrdersByCustomers
             // 
             this.buttonGetCardOrdersByCustomers.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGetCardOrdersByCustomers.Location = new System.Drawing.Point(699, 90);
+            this.buttonGetCardOrdersByCustomers.Location = new System.Drawing.Point(699, 80);
             this.buttonGetCardOrdersByCustomers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonGetCardOrdersByCustomers.Name = "buttonGetCardOrdersByCustomers";
-            this.buttonGetCardOrdersByCustomers.Size = new System.Drawing.Size(71, 32);
+            this.buttonGetCardOrdersByCustomers.Size = new System.Drawing.Size(71, 43);
             this.buttonGetCardOrdersByCustomers.TabIndex = 3;
             this.buttonGetCardOrdersByCustomers.Text = "1";
             this.buttonGetCardOrdersByCustomers.UseVisualStyleBackColor = true;
@@ -78,10 +78,10 @@
             // buttonGetMostOrderedCar
             // 
             this.buttonGetMostOrderedCar.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGetMostOrderedCar.Location = new System.Drawing.Point(508, 129);
+            this.buttonGetMostOrderedCar.Location = new System.Drawing.Point(699, 127);
             this.buttonGetMostOrderedCar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonGetMostOrderedCar.Name = "buttonGetMostOrderedCar";
-            this.buttonGetMostOrderedCar.Size = new System.Drawing.Size(71, 32);
+            this.buttonGetMostOrderedCar.Size = new System.Drawing.Size(71, 41);
             this.buttonGetMostOrderedCar.TabIndex = 4;
             this.buttonGetMostOrderedCar.Text = "2";
             this.buttonGetMostOrderedCar.UseVisualStyleBackColor = true;
@@ -90,10 +90,10 @@
             // buttonGetCarsByManufacturer
             // 
             this.buttonGetCarsByManufacturer.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGetCarsByManufacturer.Location = new System.Drawing.Point(595, 172);
+            this.buttonGetCarsByManufacturer.Location = new System.Drawing.Point(699, 172);
             this.buttonGetCarsByManufacturer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonGetCarsByManufacturer.Name = "buttonGetCarsByManufacturer";
-            this.buttonGetCarsByManufacturer.Size = new System.Drawing.Size(71, 32);
+            this.buttonGetCarsByManufacturer.Size = new System.Drawing.Size(71, 42);
             this.buttonGetCarsByManufacturer.TabIndex = 5;
             this.buttonGetCarsByManufacturer.Text = "3";
             this.buttonGetCarsByManufacturer.UseVisualStyleBackColor = true;
@@ -102,10 +102,10 @@
             // buttonGetCarCountByManufacturer
             // 
             this.buttonGetCarCountByManufacturer.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGetCarCountByManufacturer.Location = new System.Drawing.Point(599, 212);
+            this.buttonGetCarCountByManufacturer.Location = new System.Drawing.Point(699, 218);
             this.buttonGetCarCountByManufacturer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonGetCarCountByManufacturer.Name = "buttonGetCarCountByManufacturer";
-            this.buttonGetCarCountByManufacturer.Size = new System.Drawing.Size(71, 32);
+            this.buttonGetCarCountByManufacturer.Size = new System.Drawing.Size(71, 35);
             this.buttonGetCarCountByManufacturer.TabIndex = 6;
             this.buttonGetCarCountByManufacturer.Text = "4";
             this.buttonGetCarCountByManufacturer.UseVisualStyleBackColor = true;
@@ -126,7 +126,7 @@
             // 
             this.labelGetMostOrderedCar.AutoSize = true;
             this.labelGetMostOrderedCar.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGetMostOrderedCar.Location = new System.Drawing.Point(28, 132);
+            this.labelGetMostOrderedCar.Location = new System.Drawing.Point(28, 127);
             this.labelGetMostOrderedCar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelGetMostOrderedCar.Name = "labelGetMostOrderedCar";
             this.labelGetMostOrderedCar.Size = new System.Drawing.Size(468, 27);
@@ -137,7 +137,7 @@
             // 
             this.labelGetCarCountByManufacturer.AutoSize = true;
             this.labelGetCarCountByManufacturer.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGetCarCountByManufacturer.Location = new System.Drawing.Point(28, 215);
+            this.labelGetCarCountByManufacturer.Location = new System.Drawing.Point(28, 203);
             this.labelGetCarCountByManufacturer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelGetCarCountByManufacturer.Name = "labelGetCarCountByManufacturer";
             this.labelGetCarCountByManufacturer.Size = new System.Drawing.Size(567, 27);
@@ -148,7 +148,7 @@
             // 
             this.labelGetCarsByManufacturer.AutoSize = true;
             this.labelGetCarsByManufacturer.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGetCarsByManufacturer.Location = new System.Drawing.Point(28, 172);
+            this.labelGetCarsByManufacturer.Location = new System.Drawing.Point(28, 163);
             this.labelGetCarsByManufacturer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelGetCarsByManufacturer.Name = "labelGetCarsByManufacturer";
             this.labelGetCarsByManufacturer.Size = new System.Drawing.Size(551, 27);
