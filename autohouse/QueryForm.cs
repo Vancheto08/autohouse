@@ -4,8 +4,6 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Business;
 
@@ -48,11 +46,6 @@ namespace autohouse
         private void buttonGetCarCountByManufacturer_Click(object sender, EventArgs e)
         {
             dataGridViewResults.DataSource = queryBusiness.GetCarCountByManufacturer().ToList();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            QueryForm.ActiveForm.Close();
         }
     }
 }
