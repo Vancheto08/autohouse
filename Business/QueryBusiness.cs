@@ -13,16 +13,8 @@ namespace Business
         {
             using (AutohouseContext context = new AutohouseContext())
             {
-                var cardOrders = context.Orders.Where(o => o.PaymentMethod == paymentMethod).ToList();
-                //foreach (var order in cardOrders)
-                //{
-                //    var customer = context.Customers.FirstOrDefault(c => c.CustomerId == order.CustomerId);
-                //    if (customer != null)
-                //    {
-                //        order.Customer.FirstName = customer.FirstName;
-                //        order.Customer.LastName = customer.LastName;
-                //    }
-                //}
+                var cardOrders = context.Orders.Include(o=>o.Customer).                    
+                    Where(o => o.PaymentMethod == paymentMethod).ToList();
                 return cardOrders;
             }
         }
@@ -81,12 +73,14 @@ namespace Business
             }
         }
     }
-
-
     public class ManufacturerCountCars
     {
         public string ManufacturerName { get; set; }
         public int CarCount { get; set; }
     }
+    public class CarsByManufacturer
+    {
+        public string ManufacturerName { get; set; }
 
+    }
 }

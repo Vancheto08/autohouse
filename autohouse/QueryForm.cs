@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using Business;
+using Data.Models;
 
 namespace autohouse
 {
@@ -13,7 +14,11 @@ namespace autohouse
         public QueryForm()
         {
             InitializeComponent();
+
+            ManufacturerBusiness manufacturer = new ManufacturerBusiness();
+            comboBoxManufacturers.DataSource = manufacturer.GetAll().Select(m => m.Name).ToList();
         }
+
 
         private void QueryForm_Load(object sender, EventArgs e)
         {
@@ -26,32 +31,48 @@ namespace autohouse
                 .Select(o => new
                 {
                     o.OrderId,
-                    Customer = o.Customer.FirstName + " " + o.Customer.LastName,
+                    o.Customer.FirstName,
+                    o.Customer.LastName,
                     o.OrderDate
                 }).ToList();
         }
 
         private void buttonGetMostOrderedCar_Click(object sender, EventArgs e)
         {
-            var car = queryBusiness.GetMostOrderedCar();
-
-            //
+            dataGridViewResults.DataSource = new List<Car>() { queryBusiness.GetMostOrderedCar() }.Select
+                (c => new
+                {
+                    c.CarId,
+                    c.Brand.Name,
+                    c.Price,
+                    c.PublicationYear,
+                    c.Quantity
+                });
         }
 
-        private void buttonGetCarsByManufacturer_Click(object sender, EventArgs e)
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            QueryForm.ActiveForm.Close();
+        }
+
+        private void buttonGetCarsCountByManufacturer_Click(object sender, EventArgs e)
         {
             List<ManufacturerCountCars> cars = queryBusiness.GetCarCountByManufacturer();
             dataGridViewResults.DataSource = cars;
         }
 
-        private void buttonGetCarCountByManufacturer_Click(object sender, EventArgs e)
+        private void buttonGetCarsByManufacturer_Click(object sender, EventArgs e)
         {
-            //  dataGridViewResults.DataSource = queryBusiness.GetCarsByManufacturer().ToList();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            QueryForm.ActiveForm.Close();
+            dataGridViewResults.DataSource = queryBusiness.GetCarsByManufacturer(comboBoxManufacturers.Text).
+                Select(m=> new
+                {
+                    m.CarId,
+                    m.Brand.Name,
+                    m.Price,
+                    m.PublicationYear, 
+                    m.Quantity
+                }).
+                ToList();
         }
     }
 }
