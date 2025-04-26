@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using Data;
 using Data.Models;
@@ -7,55 +8,59 @@ namespace Business
 {
     public class ManufacturerBusiness
     {
-        private AutohouseContext autohouseContext;
+        private DbContext autohouseContext;
+    
+        public ManufacturerBusiness(DbContext context)
+        {
+                autohouseContext = context;
+        }
+        public ManufacturerBusiness()
+        {
+            autohouseContext = new AutohouseContext();
+        }
         public List<Manufacturer> GetAll()
         {
-            using (autohouseContext = new AutohouseContext())
-            {
-                return autohouseContext.Manufacturers.ToList();
-            }
+           
+                return autohouseContext.Set<Manufacturer>().ToList();
+            
         }
         public Manufacturer Get(int id)
         {
-            using (autohouseContext = new AutohouseContext())
-            {
-                return autohouseContext.Manufacturers.Find(id);
-            }
+            
+                return autohouseContext.Set<Manufacturer>().Find(id);
+            
         }
 
         public void Add(Manufacturer manufacturer)
         {
-            using (autohouseContext = new AutohouseContext())
-            {
-                autohouseContext.Manufacturers.Add(manufacturer);
+            
+                autohouseContext.Set<Manufacturer>().Add(manufacturer);
                 autohouseContext.SaveChanges();
-            }
+            
         }
 
         public void Update(Manufacturer manufacturer)
         {
-            using (autohouseContext = new AutohouseContext())
-            {
-                var item = autohouseContext.Manufacturers.Find(manufacturer.ManufacturerId);
+            
+                var item = autohouseContext.Set<Manufacturer>().Find(manufacturer.ManufacturerId);
                 if (item != null)
                 {
                     autohouseContext.Entry(item).CurrentValues.SetValues(manufacturer);
                     autohouseContext.SaveChanges();
                 }
-            }
+            
         }
         public void Delete(int id)
         {
-            using (autohouseContext = new AutohouseContext())
-            {
-                var item = autohouseContext.Manufacturers.Find(id);
+           
+                var item = autohouseContext.Set<Manufacturer>().Find(id);
                 if (item != null)
                 {
-                    autohouseContext.Manufacturers.Remove(item);
+                    autohouseContext.Set<Manufacturer>().Remove(item);
                     autohouseContext.SaveChanges();
                 } 
               
-            }
+            
         }
 
     }

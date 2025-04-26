@@ -3,6 +3,7 @@ using Data;
 using Data.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
@@ -13,52 +14,55 @@ namespace Business
 {
     public class BrandBusiness
     {
-        private AutohouseContext autohouseContext;
+        private DbContext autohouseContext;
+        public BrandBusiness(DbContext context)
+        {
+            autohouseContext = context;
+        }
+        public BrandBusiness()
+        {
+            autohouseContext = new AutohouseContext();
+        }
         public List<Brand> GetAll()
         {
-            using (autohouseContext = new AutohouseContext())
-            {
-                return autohouseContext.Brands.ToList();
-            }
+
+                return autohouseContext.Set<Brand>().ToList();
+            
         }
         public Brand Get(int id)
         {
-            using (autohouseContext = new AutohouseContext())
-            {
-                return autohouseContext.Brands.Find(id);
-            }
+
+                return autohouseContext.Set<Brand>().Find(id);
+  
         }
         public void Add(Brand brand)
         {
-            using (autohouseContext = new AutohouseContext())
-            {
-                autohouseContext.Brands.Add(brand);
+
+                autohouseContext.Set<Brand>().Add(brand);
                 autohouseContext.SaveChanges();
-            }
+           
         }
         public void Update(Brand brand)
         {
-            using (autohouseContext = new AutohouseContext())
-            {
-                var item = autohouseContext.Brands.Find(brand.BrandId);
+
+                var item = autohouseContext.Set<Brand>().Find(brand.BrandId);
                 if (item != null)
                 {
                     autohouseContext.Entry(item).CurrentValues.SetValues(brand);
                     autohouseContext.SaveChanges();
                 }
-            }
+            
         }
         public void Delete(int id)
         {
-            using (autohouseContext = new AutohouseContext())
-            {
-                var brand = autohouseContext.Brands.Find(id);
+
+                var brand = autohouseContext.Set<Brand>().Find(id);
                 if (brand != null)
                 {
-                    autohouseContext.Brands.Remove(brand);
+                    autohouseContext.Set<Brand>().Remove(brand);
                     autohouseContext.SaveChanges();
                 }
-            }
+            
         }
     }
 }

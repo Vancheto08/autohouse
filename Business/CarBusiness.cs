@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using Data;
 using Data.Models;
@@ -7,58 +8,61 @@ namespace Business
 {
     public class CarBusiness
     {
-        private AutohouseContext autohouseContext;
+        private DbContext autohouseContext;
 
+        public CarBusiness(DbContext context)
+        {
+            autohouseContext = context;
+        }
+        public CarBusiness()
+        {
+            autohouseContext = new AutohouseContext();
+        }
         public List<Car> GetAll()
         {
-            using (autohouseContext = new AutohouseContext())
-            {
-                return autohouseContext.Cars.ToList();
-            }
+
+                return autohouseContext.Set<Car>().ToList();
+    
 
         }
 
         public Car Get(int id)
         {
-            using (autohouseContext = new AutohouseContext())
-            {
-                return autohouseContext.Cars.Find(id);
-            }
+
+                return autohouseContext.Set<Car>().Find(id);
+         
         }
 
         public void Add(Car car)
         {
-            using (autohouseContext = new AutohouseContext())
-            {
-                autohouseContext.Cars.Add(car);
+
+                autohouseContext.Set<Car>().Add(car);
                 autohouseContext.SaveChanges();
-            }
+            
         }
 
         public void Update(Car car)
         {
-            using (autohouseContext = new AutohouseContext())
-            {
-                var item = autohouseContext.Cars.Find(car.CarId);
+           
+                var item = autohouseContext.Set<Car>().Find(car.CarId);
                 if (item != null)
                 {
                     autohouseContext.Entry(item).CurrentValues.SetValues(car);
                     autohouseContext.SaveChanges();
                 }
-            }
+            
         }
 
         public void Delete(int id)
         {
-            using (autohouseContext = new AutohouseContext())
-            {
-                var car = autohouseContext.Cars.Find(id);
+           
+                var car = autohouseContext.Set<Car>().Find(id);
                 if (car != null)
                 {
-                    autohouseContext.Cars.Remove(car);
+                    autohouseContext.Set<Car>().Remove(car);
                     autohouseContext.SaveChanges();
                 }
-            }
+            
         }
     }
 }

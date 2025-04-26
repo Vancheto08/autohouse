@@ -13,7 +13,7 @@ namespace Business
         {
             using (AutohouseContext context = new AutohouseContext())
             {
-                var cardOrders = context.Orders.Include(o=>o.Customer).                    
+                var cardOrders = context.Orders.Include(o => o.Customer).
                     Where(o => o.PaymentMethod == paymentMethod).ToList();
                 return cardOrders;
             }
@@ -41,19 +41,11 @@ namespace Business
                         .Include(c => c.Brand.Manufacturer)
                         .FirstOrDefault();
                 }
-
                 return null;
             }
         }
 
-        //4
-        public ICollection<Car> GetCarsByManufacturer(string manufacturerName)
-        {
-            using (AutohouseContext context = new AutohouseContext())
-            {
-                return context.Cars.Include(c=>c.Brand).Where(c => c.Brand.Manufacturer.Name == manufacturerName).ToList();
-            }
-        }
+
 
         //3
         public List<ManufacturerCountCars> GetCarCountByManufacturer()
@@ -72,15 +64,20 @@ namespace Business
                 return carCountByManufacturer;
             }
         }
+        //4
+        public ICollection<Car> GetCarsByManufacturer(string manufacturerName)
+        {
+            using (AutohouseContext context = new AutohouseContext())
+            {
+                return context.Cars.Include(c => c.Brand).Where(c => c.Brand.Manufacturer.Name == manufacturerName).ToList();
+            }
+        }
     }
+
     public class ManufacturerCountCars
     {
         public string ManufacturerName { get; set; }
         public int CarCount { get; set; }
     }
-    public class CarsByManufacturer
-    {
-        public string ManufacturerName { get; set; }
 
-    }
 }
