@@ -14,15 +14,15 @@ namespace Business
             using (AutohouseContext context = new AutohouseContext())
             {
                 var cardOrders = context.Orders.Where(o => o.PaymentMethod == paymentMethod).ToList();
-                foreach (var order in cardOrders)
-                {
-                    var customer = context.Customers.FirstOrDefault(c => c.CustomerId == order.CustomerId);
-                    if (customer != null)
-                    {
-                        order.Customer.FirstName = customer.FirstName;
-                        order.Customer.LastName = customer.LastName;
-                    }
-                }
+                //foreach (var order in cardOrders)
+                //{
+                //    var customer = context.Customers.FirstOrDefault(c => c.CustomerId == order.CustomerId);
+                //    if (customer != null)
+                //    {
+                //        order.Customer.FirstName = customer.FirstName;
+                //        order.Customer.LastName = customer.LastName;
+                //    }
+                //}
                 return cardOrders;
             }
         }
@@ -54,7 +54,7 @@ namespace Business
             }
         }
 
-        //3
+        //4
         public ICollection<Car> GetCarsByManufacturer(string manufacturerName)
         {
             using (AutohouseContext context = new AutohouseContext())
@@ -63,22 +63,30 @@ namespace Business
             }
         }
 
-        //4
-        public ICollection<Car> GetCarCountByManufacturer()
+        //3
+        public List<ManufacturerCountCars> GetCarCountByManufacturer()
         {
             using (AutohouseContext context = new AutohouseContext())
             {
                 var carCountByManufacturer = context.Orders_Cars
                     .GroupBy(oc => oc.Car.Brand.Manufacturer.Name)
-                    .Select(group => new
+                    .Select(group => new ManufacturerCountCars
                     {
                         ManufacturerName = group.Key,
                         CarCount = group.Count()
                     })
                     .ToList();
 
-                return (ICollection<Car>)carCountByManufacturer;
+                return carCountByManufacturer;
             }
         }
     }
+
+
+    public class ManufacturerCountCars
+    {
+        public string ManufacturerName { get; set; }
+        public int CarCount { get; set; }
+    }
+
 }
