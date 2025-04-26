@@ -47,7 +47,7 @@ namespace autohouse
                     c.Price,
                     c.PublicationYear,
                     c.Quantity
-                });
+                }).ToList();
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -63,16 +63,16 @@ namespace autohouse
 
         private void buttonGetCarsByManufacturer_Click(object sender, EventArgs e)
         {
-            dataGridViewResults.DataSource = queryBusiness.GetCarsByManufacturer(comboBoxManufacturers.Text).
-                Select(m=> new
+            dataGridViewResults.DataSource = queryBusiness.GetCarsByManufacturer(comboBoxManufacturers.Text).Select
+                (c => new
                 {
-                    m.CarId,
-                    m.Brand.Name,
-                    m.Price,
-                    m.PublicationYear, 
-                    m.Quantity
-                }).
-                ToList();
+                    c.CarId,
+                    c.Brand.Name,
+                    c.Price,
+                    c.PublicationYear,
+                    c.Quantity
+
+                }).ToList();
         }
     }
 }

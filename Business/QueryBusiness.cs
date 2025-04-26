@@ -51,7 +51,7 @@ namespace Business
         {
             using (AutohouseContext context = new AutohouseContext())
             {
-                return context.Cars.Where(c => c.Brand.Manufacturer.Name == manufacturerName).ToList();
+                return context.Cars.Include(c=>c.Brand).Where(c => c.Brand.Manufacturer.Name == manufacturerName).ToList();
             }
         }
 
