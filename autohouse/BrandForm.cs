@@ -71,8 +71,6 @@ namespace autohouse
             comboBoxManufacturer.DataSource = manufacturers;
             comboBoxManufacturer.DisplayMember = "Name";
             comboBoxManufacturer.ValueMember = "ManufacturerId";
-
-
         }
 
         private void buttonBack_Click(object sender, EventArgs e)

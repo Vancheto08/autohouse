@@ -19,11 +19,6 @@ namespace autohouse
             comboBoxManufacturers.DataSource = manufacturer.GetAll().Select(m => m.Name).ToList();
         }
 
-
-        private void QueryForm_Load(object sender, EventArgs e)
-        {
-        }
-
         private void buttonGetCardOrdersByCustomers_Click(object sender, EventArgs e)
         {
             dataGridViewResults.DataSource = queryBusiness.GetCardOrdersByCustomers()

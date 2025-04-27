@@ -15,7 +15,5 @@ namespace Data.Models
         public int PublicationYear { get; set; }
         public int Quantity  { get; set; }
         public ICollection<Order_Car> Order_Cars { get; set; }
-
-
     }
 }

@@ -170,7 +170,7 @@
             // 
             this.comboBoxManufacturers.FormattingEnabled = true;
             this.comboBoxManufacturers.Location = new System.Drawing.Point(807, 272);
-            this.comboBoxManufacturers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxManufacturers.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxManufacturers.Name = "comboBoxManufacturers";
             this.comboBoxManufacturers.Size = new System.Drawing.Size(171, 24);
             this.comboBoxManufacturers.TabIndex = 12;

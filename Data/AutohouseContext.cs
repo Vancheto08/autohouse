@@ -1,6 +1,7 @@
 ﻿using Data.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Data.Entity;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,11 @@ namespace Data
         {
 
         }
+        public AutohouseContext(DbConnection connection):base(connection, true)
+        {
 
+        }
+        
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Order_Car>()

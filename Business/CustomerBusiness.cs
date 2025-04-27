@@ -1,11 +1,8 @@
-﻿using Data;
-using Data.Models;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Data;
+using Data.Models;
 
 namespace Business
 {
@@ -14,7 +11,7 @@ namespace Business
         private DbContext autohouseContext;
         public CustomerBusiness(DbContext context)
         {
-                autohouseContext = context;
+            autohouseContext = context;
         }
         public CustomerBusiness()
         {
@@ -22,44 +19,34 @@ namespace Business
         }
         public List<Customer> GetAll()
         {
-            
-                return autohouseContext.Set<Customer> ().ToList();
-            
+            return autohouseContext.Set<Customer>().ToList();
         }
         public Customer Get(int id)
         {
-            
-                return autohouseContext.Set<Customer>().Find(id);
-            
+            return autohouseContext.Set<Customer>().Find(id);
         }
         public void Add(Customer customer)
         {
-            
-                autohouseContext.Set<Customer>().Add(customer);
-                autohouseContext.SaveChanges();
-           
+            autohouseContext.Set<Customer>().Add(customer);
+            autohouseContext.SaveChanges();
         }
         public void Update(Customer customer)
         {
-            
-                var item = autohouseContext.Set<Customer>().Find(customer.CustomerId);
-                if (item != null)
-                {
-                    autohouseContext.Entry(item).CurrentValues.SetValues(customer);
-                    autohouseContext.SaveChanges();
-                }
-            
+            var item = autohouseContext.Set<Customer>().Find(customer.CustomerId);
+            if (item != null)
+            {
+                autohouseContext.Entry(item).CurrentValues.SetValues(customer);
+                autohouseContext.SaveChanges();
+            }
         }
         public void Delete(int id)
         {
-          
-                var customer = autohouseContext.Set<Customer>().Find(id);
-                if (customer != null)
-                {
-                    autohouseContext.Set<Customer>().Remove(customer);
-                    autohouseContext.SaveChanges();
-                }
-            
+            var customer = autohouseContext.Set<Customer>().Find(id);
+            if (customer != null)
+            {
+                autohouseContext.Set<Customer>().Remove(customer);
+                autohouseContext.SaveChanges();
+            }
         }
     }
 }

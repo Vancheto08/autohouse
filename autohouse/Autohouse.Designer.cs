@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.menuStripHomePage = new System.Windows.Forms.MenuStrip();
-            this.openCarsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.маркиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.производителиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.клиентиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.поръчкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.поръчкиКолиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.сравкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.OpenCarsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.BrandToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ManufacturerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.OrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.OrderCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.QueryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripHomePage.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,73 +44,73 @@
             this.menuStripHomePage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.menuStripHomePage.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStripHomePage.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openCarsToolStripMenuItem,
-            this.маркиToolStripMenuItem,
-            this.производителиToolStripMenuItem,
-            this.клиентиToolStripMenuItem,
-            this.поръчкиToolStripMenuItem,
-            this.поръчкиКолиToolStripMenuItem,
-            this.сравкиToolStripMenuItem});
+            this.OpenCarsToolStripMenuItem,
+            this.BrandToolStripMenuItem,
+            this.ManufacturerToolStripMenuItem,
+            this.CustomerToolStripMenuItem,
+            this.OrderToolStripMenuItem,
+            this.OrderCarToolStripMenuItem,
+            this.QueryToolStripMenuItem});
             this.menuStripHomePage.Location = new System.Drawing.Point(0, 0);
             this.menuStripHomePage.Name = "menuStripHomePage";
             this.menuStripHomePage.Size = new System.Drawing.Size(1067, 36);
             this.menuStripHomePage.TabIndex = 0;
             this.menuStripHomePage.Text = "menuStrip1";
             // 
-            // openCarsToolStripMenuItem
+            // OpenCarsToolStripMenuItem
             // 
-            this.openCarsToolStripMenuItem.Name = "openCarsToolStripMenuItem";
-            this.openCarsToolStripMenuItem.Size = new System.Drawing.Size(73, 32);
-            this.openCarsToolStripMenuItem.Text = "Коли";
-            this.openCarsToolStripMenuItem.Click += new System.EventHandler(this.openCarsToolStripMenuItem_Click);
+            this.OpenCarsToolStripMenuItem.Name = "OpenCarsToolStripMenuItem";
+            this.OpenCarsToolStripMenuItem.Size = new System.Drawing.Size(73, 32);
+            this.OpenCarsToolStripMenuItem.Text = "Коли";
+            this.OpenCarsToolStripMenuItem.Click += new System.EventHandler(this.OpenCarsToolStripMenuItem_Click);
             // 
-            // маркиToolStripMenuItem
+            // BrandToolStripMenuItem
             // 
-            this.маркиToolStripMenuItem.Name = "маркиToolStripMenuItem";
-            this.маркиToolStripMenuItem.Size = new System.Drawing.Size(88, 32);
-            this.маркиToolStripMenuItem.Text = "Марки";
-            this.маркиToolStripMenuItem.Click += new System.EventHandler(this.маркиToolStripMenuItem_Click);
+            this.BrandToolStripMenuItem.Name = "BrandToolStripMenuItem";
+            this.BrandToolStripMenuItem.Size = new System.Drawing.Size(88, 32);
+            this.BrandToolStripMenuItem.Text = "Марки";
+            this.BrandToolStripMenuItem.Click += new System.EventHandler(this.BrandToolStripMenuItem_Click);
             // 
-            // производителиToolStripMenuItem
+            // ManufacturerToolStripMenuItem
             // 
-            this.производителиToolStripMenuItem.Name = "производителиToolStripMenuItem";
-            this.производителиToolStripMenuItem.Size = new System.Drawing.Size(172, 32);
-            this.производителиToolStripMenuItem.Text = "Производители";
-            this.производителиToolStripMenuItem.Click += new System.EventHandler(this.производителиToolStripMenuItem_Click);
+            this.ManufacturerToolStripMenuItem.Name = "ManufacturerToolStripMenuItem";
+            this.ManufacturerToolStripMenuItem.Size = new System.Drawing.Size(172, 32);
+            this.ManufacturerToolStripMenuItem.Text = "Производители";
+            this.ManufacturerToolStripMenuItem.Click += new System.EventHandler(this.ManufacturerToolStripMenuItem_Click);
             // 
-            // клиентиToolStripMenuItem
+            // CustomerToolStripMenuItem
             // 
-            this.клиентиToolStripMenuItem.Name = "клиентиToolStripMenuItem";
-            this.клиентиToolStripMenuItem.Size = new System.Drawing.Size(103, 32);
-            this.клиентиToolStripMenuItem.Text = "Клиенти";
-            this.клиентиToolStripMenuItem.Click += new System.EventHandler(this.клиентиToolStripMenuItem_Click);
+            this.CustomerToolStripMenuItem.Name = "CustomerToolStripMenuItem";
+            this.CustomerToolStripMenuItem.Size = new System.Drawing.Size(103, 32);
+            this.CustomerToolStripMenuItem.Text = "Клиенти";
+            this.CustomerToolStripMenuItem.Click += new System.EventHandler(this.CustomerToolStripMenuItem_Click);
             // 
-            // поръчкиToolStripMenuItem
+            // OrderToolStripMenuItem
             // 
-            this.поръчкиToolStripMenuItem.Name = "поръчкиToolStripMenuItem";
-            this.поръчкиToolStripMenuItem.Size = new System.Drawing.Size(109, 32);
-            this.поръчкиToolStripMenuItem.Text = "Поръчки";
-            this.поръчкиToolStripMenuItem.Click += new System.EventHandler(this.поръчкиToolStripMenuItem_Click);
+            this.OrderToolStripMenuItem.Name = "OrderToolStripMenuItem";
+            this.OrderToolStripMenuItem.Size = new System.Drawing.Size(109, 32);
+            this.OrderToolStripMenuItem.Text = "Поръчки";
+            this.OrderToolStripMenuItem.Click += new System.EventHandler(this.OrderToolStripMenuItem_Click);
             // 
-            // поръчкиКолиToolStripMenuItem
+            // OrderCarToolStripMenuItem
             // 
-            this.поръчкиКолиToolStripMenuItem.Name = "поръчкиКолиToolStripMenuItem";
-            this.поръчкиКолиToolStripMenuItem.Size = new System.Drawing.Size(174, 32);
-            this.поръчкиКолиToolStripMenuItem.Text = "Поръчки - Коли";
-            this.поръчкиКолиToolStripMenuItem.Click += new System.EventHandler(this.поръчкиКолиToolStripMenuItem_Click);
+            this.OrderCarToolStripMenuItem.Name = "OrderCarToolStripMenuItem";
+            this.OrderCarToolStripMenuItem.Size = new System.Drawing.Size(174, 32);
+            this.OrderCarToolStripMenuItem.Text = "Поръчки - Коли";
+            this.OrderCarToolStripMenuItem.Click += new System.EventHandler(this.OrderCarToolStripMenuItem_Click);
             // 
-            // сравкиToolStripMenuItem
+            // QueryToolStripMenuItem
             // 
-            this.сравкиToolStripMenuItem.Name = "сравкиToolStripMenuItem";
-            this.сравкиToolStripMenuItem.Size = new System.Drawing.Size(105, 32);
-            this.сравкиToolStripMenuItem.Text = "Справки";
-            this.сравкиToolStripMenuItem.Click += new System.EventHandler(this.сравкиToolStripMenuItem_Click);
+            this.QueryToolStripMenuItem.Name = "QueryToolStripMenuItem";
+            this.QueryToolStripMenuItem.Size = new System.Drawing.Size(105, 32);
+            this.QueryToolStripMenuItem.Text = "Справки";
+            this.QueryToolStripMenuItem.Click += new System.EventHandler(this.QueryToolStripMenuItem_Click);
             // 
             // Autohouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 49);
+            this.ClientSize = new System.Drawing.Size(1067, 283);
             this.Controls.Add(this.menuStripHomePage);
             this.MainMenuStrip = this.menuStripHomePage;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -126,13 +126,13 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStripHomePage;
-        private System.Windows.Forms.ToolStripMenuItem openCarsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem маркиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem производителиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem клиентиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem поръчкиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem поръчкиКолиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem сравкиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem OpenCarsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem BrandToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ManufacturerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CustomerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem OrderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem OrderCarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem QueryToolStripMenuItem;
     }
 }
 

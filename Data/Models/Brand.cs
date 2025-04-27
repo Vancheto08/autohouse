@@ -13,7 +13,5 @@ namespace Data.Models
         public int ManufacturerId { get; set; }
         public Manufacturer Manufacturer { get; set; }
         public ICollection<Car> Cars { get; set; }
-
-        
     }
 }

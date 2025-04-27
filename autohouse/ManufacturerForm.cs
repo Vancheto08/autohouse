@@ -18,7 +18,6 @@ namespace autohouse
 
         private void buttonBack_Click(object sender, EventArgs e)
         {
-            
             ManufacturerForm.ActiveForm.Close();
         }
 

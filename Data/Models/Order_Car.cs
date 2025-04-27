@@ -12,7 +12,6 @@ namespace Data.Models
         public Order Order { get; set; }
         public int CarId {  get; set; }
         public Car Car { get; set; }
-        public int Quantity {  get; set; } 
-            
+        public int Quantity {  get; set; }
     }
 }
