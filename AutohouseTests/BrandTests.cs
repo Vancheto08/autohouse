@@ -4,6 +4,8 @@ using Data.Models;
 using Effort;
 using NUnit.Framework;
 using NUnit.Framework.Legacy;
+using System;
+using DbConnectionFactory = Effort.DbConnectionFactory;
 
 namespace AutohouseTests
 {
