@@ -5,7 +5,9 @@ using Effort;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using NUnit.Framework.Legacy;
+using ServiceStack.Data;
 using System;
+using DbConnectionFactory = Effort.DbConnectionFactory;
 
 namespace AutohouseTests
 {
