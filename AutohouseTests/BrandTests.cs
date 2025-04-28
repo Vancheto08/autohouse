@@ -2,10 +2,8 @@
 using Data;
 using Data.Models;
 using Effort;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
 using NUnit.Framework.Legacy;
-using System;
 
 namespace AutohouseTests
 {
@@ -21,22 +19,25 @@ namespace AutohouseTests
         {
             var connection = DbConnectionFactory.CreateTransient();
             context = new AutohouseContext(connection);
-            brandBusiness= new BrandBusiness(context);
+            brandBusiness = new BrandBusiness(context);
         }
         [Test]
         public void GetAllReturnsAllBrands()
         {
             // Arrange
-            var manufacturer1 = new Manufacturer { ManufacturerId = 1, Name = "Manufacturer1", Country = "Country1", Brands = null};
+            var manufacturer1 = new Manufacturer { ManufacturerId = 1, Name = "Manufacturer1", Country = "Country1", Brands = null };
             context.Manufacturers.Add(manufacturer1);
             context.SaveChanges();
-            var brand1 = new Brand { BrandId = 1, Name = "Brand1", ManufacturerId = 1, Cars=null, Manufacturer =null};
-            var brand2 = new Brand { BrandId = 2, Name = "Brand2",
+            var brand1 = new Brand { BrandId = 1, Name = "Brand1", ManufacturerId = 1, Cars = null, Manufacturer = null };
+            var brand2 = new Brand
+            {
+                BrandId = 2,
+                Name = "Brand2",
                 ManufacturerId = 1,
                 Cars = null,
-                Manufacturer= null
+                Manufacturer = null
             };
-      
+
             context.Brands.Add(brand1);
             context.Brands.Add(brand2);
             context.SaveChanges();
@@ -60,7 +61,22 @@ namespace AutohouseTests
             // Assert
             ClassicAssert.AreEqual(brand.BrandId, result.BrandId);
         }
-      
-      
+        [Test]
+        public void TryAddBrand()
+        {
+            // Arrange
+            var manufacturer = new Manufacturer { ManufacturerId = 1, Name = "Manufacturer1", Country = "Country1", Brands = null };
+            context.Manufacturers.Add(manufacturer);
+            context.SaveChanges();
+            var brand = new Brand { BrandId = 1, Name = "Brand1", ManufacturerId = 1, Cars = null, Manufacturer = null };
+            context.SaveChanges();
+            ////Act
+            //brandBusiness.Add(brand);
+            //var 
+            //// Assert
+            //ClassicAssert.AreEqual(brand.BrandId, result.BrandId);
+        }
+
+
     }
 }
