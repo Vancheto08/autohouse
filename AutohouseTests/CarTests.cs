@@ -24,7 +24,7 @@ namespace AutohouseTests
         public void Setup()
         {
             var connection = DbConnectionFactory.CreateTransient();
-            context = new AutohouseContext();
+            context = new AutohouseContext(connection);
             carBusiness = new CarBusiness(context);
         }
         [Test]
