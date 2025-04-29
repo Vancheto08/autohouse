@@ -31,12 +31,12 @@ namespace AutohouseTests
         public void GetAllReturnsAllBrands()
         {
             //Arrange
-            var brand = new Brand { BrandId = 1, Name = "Brand1" };
+            var brand = new Brand { BrandId = 1, Name = "Brand1", ManufacturerId = 1, Manufacturer = null, Cars = null };
             context.Brands.Add(brand);
             context.SaveChanges();
 
-            var car1 = new Car { CarId = 1, BrandId = 1, Brand = brand, Price = 10000, PublicationYear = 2020, Quantity = 5 };
-            var car2 = new Car { CarId = 2, BrandId = 1, Brand = brand, Price = 12000, PublicationYear = 2021, Quantity = 3 };
+            var car1 = new Car { CarId = 1, BrandId = 1, Brand = brand, Price = 10000, PublicationYear = 2020, Quantity = 5, Order_Cars = null };
+            var car2 = new Car { CarId = 2, BrandId = 1, Brand = brand, Price = 12000, PublicationYear = 2021, Quantity = 3, Order_Cars = null };
             context.Cars.Add(car1);
             context.Cars.Add(car2);
             context.SaveChanges();
