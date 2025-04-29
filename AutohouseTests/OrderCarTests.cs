@@ -1,12 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Business;
+using Data;
+using Effort;
+using NUnit.Framework;
 
 namespace AutohouseTests
 {
-    internal class OrderCarTests
+    [TestFixture]
+    public class OrderCarTests
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Structure", "NUnit1032:An IDisposable field/property should be Disposed in a TearDown method", Justification = "<Pending>")]
+        private AutohouseContext context;
+        private OrderCarBusiness orderCarBusiness;
+
+        [SetUp]
+        public void Setup()
+        {
+            var connection = DbConnectionFactory.CreateTransient();
+            context = new AutohouseContext(connection);
+            orderCarBusiness = new OrderCarBusiness(context);
+        }
     }
 }
