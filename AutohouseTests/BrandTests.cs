@@ -4,7 +4,9 @@ using Data.Models;
 using Effort;
 using NUnit.Framework;
 using NUnit.Framework.Legacy;
+using ServiceStack;
 using System;
+using System.Linq;
 using DbConnectionFactory = Effort.DbConnectionFactory;
 
 namespace AutohouseTests
@@ -70,15 +72,50 @@ namespace AutohouseTests
             var manufacturer = new Manufacturer { ManufacturerId = 1, Name = "Manufacturer1", Country = "Country1", Brands = null };
             context.Manufacturers.Add(manufacturer);
             context.SaveChanges();
+
             var brand = new Brand { BrandId = 1, Name = "Brand1", ManufacturerId = 1, Cars = null, Manufacturer = null };
             context.SaveChanges();
-            ////Act
-            //brandBusiness.Add(brand);
-            //var 
-            //// Assert
-            //ClassicAssert.AreEqual(brand.BrandId, result.BrandId);
+            //Act
+            brandBusiness.Add(brand);
+            var result = context.Brands.FirstOrDefault(b => b.BrandId == brand.BrandId);
+            // Assert
+            ClassicAssert.NotNull(result);
+            ClassicAssert.AreEqual(brand.Name, result.Name);
         }
+        [Test]
+        public void TryDeleteBrand()
+        {
+            //Arrange
+            var manufacturer = new Manufacturer { ManufacturerId = 1, Name = "Manufacturer1", Country = "Country1", Brands = null };
+            context.Manufacturers.Add(manufacturer);
+            context.SaveChanges();
 
+            var brand = new Brand { BrandId = 1, Name = "Brand1", ManufacturerId = 1 };
+            context.Brands.Add(brand);
+            context.SaveChanges();
+            //Act
+            brandBusiness.Delete(brand.BrandId);
+            var result = context.Brands.FirstOrDefault(b => b.BrandId == brand.BrandId);
+            //Assert
+            ClassicAssert.IsNull(result);
+        }
+        [Test]
+        public void TryUpdateBrand()
+        {
+            //Arrange
+            var manufacturer = new Manufacturer { ManufacturerId = 1, Name = "Manufacturer1", Country = "Country1", Brands = null };
+            context.Manufacturers.Add(manufacturer);
+            context.SaveChanges();
 
+            var brand = new Brand { BrandId = 1, Name = "Brand1", ManufacturerId = 1 };
+            context.Brands.Add(brand);
+            context.SaveChanges();
+            //Act
+            var updateBrand = new Brand { BrandId = 1, Name = "UpdatedBrand", ManufacturerId = 1 };
+            var result = context.Brands.FirstOrDefault(b=>b.BrandId == updateBrand.BrandId);
+            //Assert
+            ClassicAssert.NotNull(result);
+            ClassicAssert.AreEqual(brand.Name, result.Name);
+        }
     }
 }
