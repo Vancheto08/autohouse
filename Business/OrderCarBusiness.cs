@@ -49,7 +49,7 @@ namespace Business
             }).ToList();
         }
         /// <summary>
-        /// Gets an order-car by order Id and car Id.
+        /// Gets an order-car record by order Id and car Id.
         /// </summary>
         /// <param name="orderId">The Id of the order.</param>
         /// <param name="carId">The Id of the car.</param>

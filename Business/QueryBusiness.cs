@@ -101,5 +101,4 @@ namespace Business
         /// </summary>
         public int CarCount { get; set; }
     }
-
 }
