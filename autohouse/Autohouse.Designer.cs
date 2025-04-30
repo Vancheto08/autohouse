@@ -44,9 +44,9 @@
             this.menuStripHomePage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.menuStripHomePage.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStripHomePage.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.OpenCarsToolStripMenuItem,
-            this.BrandToolStripMenuItem,
             this.ManufacturerToolStripMenuItem,
+            this.BrandToolStripMenuItem,
+            this.OpenCarsToolStripMenuItem,
             this.CustomerToolStripMenuItem,
             this.OrderToolStripMenuItem,
             this.OrderCarToolStripMenuItem,
