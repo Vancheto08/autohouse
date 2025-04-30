@@ -11,10 +11,17 @@ namespace Business
     public class BrandBusiness
     {
         private DbContext autohouseContext;
+        /// <summary>
+        /// Create an instance of <see href="BrandBusiness">with the  specified context
+        /// </summary>
+        /// <param name="context">instance of DbContext  </param>
         public BrandBusiness(DbContext context)
         {
             autohouseContext = context;
         }
+        /// <summary>       
+        /// Create an instance of <see href="BrandBusiness">
+        /// </summary>
         public BrandBusiness()
         {
             autohouseContext = new AutohouseContext();
