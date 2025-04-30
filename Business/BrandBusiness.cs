@@ -12,7 +12,7 @@ namespace Business
     {
         private DbContext autohouseContext;
         /// <summary>
-        /// Create an instance of <see href="BrandBusiness"> with the  specified context.
+        /// Creates an instance of <see href="BrandBusiness"> with the specified context.
         /// </summary>
         /// <param name="context">An instance of DbContext.</param>
         public BrandBusiness(DbContext context)
@@ -20,7 +20,7 @@ namespace Business
             autohouseContext = context;
         }
         /// <summary>       
-        /// Create an instance of <see href="BrandBusiness">.
+        /// Creates an instance of <see href="BrandBusiness">.
         /// </summary>
         public BrandBusiness()
         {
@@ -35,7 +35,7 @@ namespace Business
             return autohouseContext.Set<Brand>().ToList();
         }
         /// <summary>
-        /// Get a brand by its Id.
+        /// Gets a brand by its Id.
         /// </summary>
         /// <param name="id">The Id of the brand to retrieve.</param>
         /// <returns>The brand with the specified Id.</returns>
