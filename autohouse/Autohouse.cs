@@ -62,5 +62,10 @@ namespace autohouse
             QueryForm queryForm = new QueryForm();
             queryForm.ShowDialog();
         }
+
+        private void toolStripMenuItemExit_Click(object sender, EventArgs e)
+        {
+            Autohouse.ActiveForm.Close();
+        }
     } 
 }
