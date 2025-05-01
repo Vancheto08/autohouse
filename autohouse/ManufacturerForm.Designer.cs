@@ -79,7 +79,7 @@
             // 
             this.textBoxName.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxName.Location = new System.Drawing.Point(213, 141);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(179, 32);
             this.textBoxName.TabIndex = 3;
@@ -88,7 +88,7 @@
             // 
             this.textBoxCountry.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCountry.Location = new System.Drawing.Point(213, 179);
-            this.textBoxCountry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCountry.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCountry.Name = "textBoxCountry";
             this.textBoxCountry.Size = new System.Drawing.Size(179, 32);
             this.textBoxCountry.TabIndex = 4;
@@ -98,7 +98,7 @@
             this.dataGridViewManufacturer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewManufacturer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewManufacturer.Location = new System.Drawing.Point(435, 107);
-            this.dataGridViewManufacturer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewManufacturer.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewManufacturer.Name = "dataGridViewManufacturer";
             this.dataGridViewManufacturer.RowHeadersWidth = 51;
             this.dataGridViewManufacturer.RowTemplate.Height = 24;
@@ -109,7 +109,7 @@
             // 
             this.buttonInsert.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInsert.Location = new System.Drawing.Point(22, 256);
-            this.buttonInsert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonInsert.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInsert.Name = "buttonInsert";
             this.buttonInsert.Size = new System.Drawing.Size(128, 37);
             this.buttonInsert.TabIndex = 6;
@@ -121,7 +121,7 @@
             // 
             this.buttonUpdate.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdate.Location = new System.Drawing.Point(155, 256);
-            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(128, 37);
             this.buttonUpdate.TabIndex = 7;
@@ -133,7 +133,7 @@
             // 
             this.buttonDelete.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDelete.Location = new System.Drawing.Point(288, 256);
-            this.buttonDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(128, 37);
             this.buttonDelete.TabIndex = 8;
@@ -145,7 +145,7 @@
             // 
             this.buttonBack.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBack.Location = new System.Drawing.Point(701, 309);
-            this.buttonBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(144, 37);
             this.buttonBack.TabIndex = 9;
@@ -157,7 +157,7 @@
             // 
             this.buttonSave.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSave.Location = new System.Drawing.Point(156, 256);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(128, 37);
             this.buttonSave.TabIndex = 10;
@@ -169,6 +169,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(861, 374);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonBack);
@@ -181,7 +182,7 @@
             this.Controls.Add(this.labelCountry);
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.labelManufacturer);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ManufacturerForm";
             this.Text = "ManufacturerForm";
             this.Load += new System.EventHandler(this.ManufacturerForm_Load);

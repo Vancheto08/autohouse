@@ -48,7 +48,7 @@
             // 
             this.labelBrand.AutoSize = true;
             this.labelBrand.Font = new System.Drawing.Font("Georgia", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelBrand.Location = new System.Drawing.Point(322, 53);
+            this.labelBrand.Location = new System.Drawing.Point(351, 53);
             this.labelBrand.Name = "labelBrand";
             this.labelBrand.Size = new System.Drawing.Size(109, 34);
             this.labelBrand.TabIndex = 0;
@@ -170,6 +170,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(839, 450);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonSave);

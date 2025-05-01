@@ -118,9 +118,9 @@
             // pictureBoxBackground
             // 
             this.pictureBoxBackground.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBackground.Image")));
-            this.pictureBoxBackground.Location = new System.Drawing.Point(-7, 28);
+            this.pictureBoxBackground.Location = new System.Drawing.Point(-11, -15);
             this.pictureBoxBackground.Name = "pictureBoxBackground";
-            this.pictureBoxBackground.Size = new System.Drawing.Size(967, 442);
+            this.pictureBoxBackground.Size = new System.Drawing.Size(970, 442);
             this.pictureBoxBackground.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxBackground.TabIndex = 1;
             this.pictureBoxBackground.TabStop = false;
