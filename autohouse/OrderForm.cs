@@ -36,6 +36,7 @@ namespace autohouse
             dataGridViewOrders.Columns["CustomerId"].Visible = true;
             dataGridViewOrders.Columns["OrderId"].Visible = false;
             dataGridViewOrders.Columns["Customer"].Visible = false;
+            dataGridViewOrders.Columns["Order_Cars"].Visible = false;
 
             dataGridViewCustomers.DataSource = customers;
             dataGridViewCustomers.Columns["CustomerId"].Visible = true;

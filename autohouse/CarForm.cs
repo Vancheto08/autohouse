@@ -28,6 +28,7 @@ namespace autohouse
             dataGridViewCars.DataSource = cars;
             dataGridViewCars.Columns["CarId"].Visible = false;
             dataGridViewCars.Columns["Brand"].Visible = false;
+            dataGridViewCars.Columns["Order_Cars"].Visible = false;
             //dataGridViewCars.Columns["BrandId"].Visible = false;
 
             dataGridViewBrand.DataSource = brands;
