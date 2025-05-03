@@ -232,7 +232,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "BrandForm";
-            this.Text = "BrandForm";
+            this.Text = "Марки";
             this.Load += new System.EventHandler(this.BrandForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBrands)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewManufacturers)).EndInit();

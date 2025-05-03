@@ -201,7 +201,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "ManufacturerForm";
-            this.Text = "ManufacturerForm";
+            this.Text = "Производители";
             this.Load += new System.EventHandler(this.ManufacturerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewManufacturer)).EndInit();
             this.ResumeLayout(false);

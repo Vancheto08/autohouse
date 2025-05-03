@@ -248,7 +248,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "CustomerForm";
-            this.Text = "CustomerForm";
+            this.Text = "Клиенти";
             this.Load += new System.EventHandler(this.CustomerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCustomers)).EndInit();
             this.ResumeLayout(false);
