@@ -46,6 +46,7 @@ namespace autohouse
 
             dataGridViewOrders.DataSource = orders;
             dataGridViewOrders.Columns["Order_Cars"].Visible = false;
+            dataGridViewOrders.Columns["Customer"].Visible = false;
 
             comboBoxCarId.DataSource = cars;
             comboBoxCarId.DisplayMember = "BrandName";
@@ -177,6 +178,21 @@ namespace autohouse
         {
             dataGridViewOrderCars.ClearSelection();
             dataGridViewOrderCars.Enabled = true;
+        }
+
+        private void labelOrderCars_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelOrders_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelCars_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -40,6 +40,7 @@
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonBack = new System.Windows.Forms.Button();
             this.buttonSave = new System.Windows.Forms.Button();
+            this.labelManufacturers = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewManufacturer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,9 +48,11 @@
             // 
             this.labelManufacturer.AutoSize = true;
             this.labelManufacturer.Font = new System.Drawing.Font("Georgia", 22.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelManufacturer.Location = new System.Drawing.Point(415, 44);
+            this.labelManufacturer.ForeColor = System.Drawing.Color.DarkRed;
+            this.labelManufacturer.Location = new System.Drawing.Point(311, 36);
+            this.labelManufacturer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelManufacturer.Name = "labelManufacturer";
-            this.labelManufacturer.Size = new System.Drawing.Size(301, 43);
+            this.labelManufacturer.Size = new System.Drawing.Size(241, 35);
             this.labelManufacturer.TabIndex = 0;
             this.labelManufacturer.Text = "Производители";
             // 
@@ -57,9 +60,10 @@
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(165, 176);
+            this.labelName.Location = new System.Drawing.Point(124, 143);
+            this.labelName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(82, 32);
+            this.labelName.Size = new System.Drawing.Size(64, 27);
             this.labelName.TabIndex = 1;
             this.labelName.Text = "Име:";
             // 
@@ -67,49 +71,50 @@
             // 
             this.labelCountry.AutoSize = true;
             this.labelCountry.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCountry.Location = new System.Drawing.Point(109, 226);
+            this.labelCountry.Location = new System.Drawing.Point(82, 184);
+            this.labelCountry.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCountry.Name = "labelCountry";
-            this.labelCountry.Size = new System.Drawing.Size(147, 32);
+            this.labelCountry.Size = new System.Drawing.Size(118, 27);
             this.labelCountry.TabIndex = 2;
             this.labelCountry.Text = "Държава:";
             // 
             // textBoxName
             // 
             this.textBoxName.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxName.Location = new System.Drawing.Point(284, 174);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxName.Location = new System.Drawing.Point(213, 141);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(237, 38);
+            this.textBoxName.Size = new System.Drawing.Size(179, 32);
             this.textBoxName.TabIndex = 3;
             // 
             // textBoxCountry
             // 
             this.textBoxCountry.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCountry.Location = new System.Drawing.Point(284, 220);
-            this.textBoxCountry.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCountry.Location = new System.Drawing.Point(213, 179);
+            this.textBoxCountry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCountry.Name = "textBoxCountry";
-            this.textBoxCountry.Size = new System.Drawing.Size(237, 38);
+            this.textBoxCountry.Size = new System.Drawing.Size(179, 32);
             this.textBoxCountry.TabIndex = 4;
             // 
             // dataGridViewManufacturer
             // 
             this.dataGridViewManufacturer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewManufacturer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewManufacturer.Location = new System.Drawing.Point(580, 132);
-            this.dataGridViewManufacturer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewManufacturer.Location = new System.Drawing.Point(435, 141);
+            this.dataGridViewManufacturer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewManufacturer.Name = "dataGridViewManufacturer";
             this.dataGridViewManufacturer.RowHeadersWidth = 51;
             this.dataGridViewManufacturer.RowTemplate.Height = 24;
-            this.dataGridViewManufacturer.Size = new System.Drawing.Size(547, 181);
+            this.dataGridViewManufacturer.Size = new System.Drawing.Size(410, 147);
             this.dataGridViewManufacturer.TabIndex = 5;
             // 
             // buttonInsert
             // 
             this.buttonInsert.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInsert.Location = new System.Drawing.Point(29, 315);
-            this.buttonInsert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonInsert.Location = new System.Drawing.Point(22, 256);
+            this.buttonInsert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonInsert.Name = "buttonInsert";
-            this.buttonInsert.Size = new System.Drawing.Size(171, 46);
+            this.buttonInsert.Size = new System.Drawing.Size(128, 37);
             this.buttonInsert.TabIndex = 6;
             this.buttonInsert.Text = "Добави";
             this.buttonInsert.UseVisualStyleBackColor = true;
@@ -118,10 +123,10 @@
             // buttonUpdate
             // 
             this.buttonUpdate.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdate.Location = new System.Drawing.Point(207, 315);
-            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonUpdate.Location = new System.Drawing.Point(155, 256);
+            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(171, 46);
+            this.buttonUpdate.Size = new System.Drawing.Size(128, 37);
             this.buttonUpdate.TabIndex = 7;
             this.buttonUpdate.Text = "Промени";
             this.buttonUpdate.UseVisualStyleBackColor = true;
@@ -130,10 +135,10 @@
             // buttonDelete
             // 
             this.buttonDelete.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.Location = new System.Drawing.Point(384, 315);
-            this.buttonDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonDelete.Location = new System.Drawing.Point(288, 256);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(171, 46);
+            this.buttonDelete.Size = new System.Drawing.Size(128, 37);
             this.buttonDelete.TabIndex = 8;
             this.buttonDelete.Text = "Изтрий";
             this.buttonDelete.UseVisualStyleBackColor = true;
@@ -142,10 +147,10 @@
             // buttonBack
             // 
             this.buttonBack.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBack.Location = new System.Drawing.Point(935, 380);
-            this.buttonBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonBack.Location = new System.Drawing.Point(738, 326);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(192, 46);
+            this.buttonBack.Size = new System.Drawing.Size(112, 37);
             this.buttonBack.TabIndex = 9;
             this.buttonBack.Text = "Назад";
             this.buttonBack.UseVisualStyleBackColor = true;
@@ -154,21 +159,32 @@
             // buttonSave
             // 
             this.buttonSave.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSave.Location = new System.Drawing.Point(208, 315);
-            this.buttonSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonSave.Location = new System.Drawing.Point(156, 256);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(171, 46);
+            this.buttonSave.Size = new System.Drawing.Size(128, 37);
             this.buttonSave.TabIndex = 10;
             this.buttonSave.Text = "Запази";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Visible = false;
             // 
+            // labelManufacturers
+            // 
+            this.labelManufacturers.AutoSize = true;
+            this.labelManufacturers.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelManufacturers.Location = new System.Drawing.Point(553, 114);
+            this.labelManufacturers.Name = "labelManufacturers";
+            this.labelManufacturers.Size = new System.Drawing.Size(179, 25);
+            this.labelManufacturers.TabIndex = 11;
+            this.labelManufacturers.Text = "Производители:";
+            // 
             // ManufacturerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1148, 460);
+            this.ClientSize = new System.Drawing.Size(861, 374);
+            this.Controls.Add(this.labelManufacturers);
             this.Controls.Add(this.buttonSave);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.buttonDelete);
@@ -181,7 +197,7 @@
             this.Controls.Add(this.labelName);
             this.Controls.Add(this.labelManufacturer);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "ManufacturerForm";
             this.Text = "ManufacturerForm";
@@ -205,5 +221,6 @@
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonBack;
         private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.Label labelManufacturers;
     }
 }
