@@ -56,9 +56,10 @@
             this.labelOrder.AutoSize = true;
             this.labelOrder.Font = new System.Drawing.Font("Georgia", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelOrder.ForeColor = System.Drawing.Color.DarkRed;
-            this.labelOrder.Location = new System.Drawing.Point(368, 21);
+            this.labelOrder.Location = new System.Drawing.Point(491, 26);
+            this.labelOrder.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelOrder.Name = "labelOrder";
-            this.labelOrder.Size = new System.Drawing.Size(136, 34);
+            this.labelOrder.Size = new System.Drawing.Size(172, 43);
             this.labelOrder.TabIndex = 0;
             this.labelOrder.Text = "Поръчки";
             // 
@@ -66,34 +67,38 @@
             // 
             this.labelCustomer.AutoSize = true;
             this.labelCustomer.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCustomer.Location = new System.Drawing.Point(120, 124);
+            this.labelCustomer.Location = new System.Drawing.Point(160, 153);
+            this.labelCustomer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCustomer.Name = "labelCustomer";
-            this.labelCustomer.Size = new System.Drawing.Size(99, 25);
+            this.labelCustomer.Size = new System.Drawing.Size(127, 31);
             this.labelCustomer.TabIndex = 1;
             this.labelCustomer.Text = "Клиент:";
             // 
             // comboBoxCustomer
             // 
             this.comboBoxCustomer.FormattingEnabled = true;
-            this.comboBoxCustomer.Location = new System.Drawing.Point(225, 130);
+            this.comboBoxCustomer.Location = new System.Drawing.Point(300, 160);
+            this.comboBoxCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxCustomer.Name = "comboBoxCustomer";
-            this.comboBoxCustomer.Size = new System.Drawing.Size(165, 21);
+            this.comboBoxCustomer.Size = new System.Drawing.Size(219, 24);
             this.comboBoxCustomer.TabIndex = 2;
             // 
             // dateTimePickerDate
             // 
-            this.dateTimePickerDate.Location = new System.Drawing.Point(223, 168);
+            this.dateTimePickerDate.Location = new System.Drawing.Point(297, 207);
+            this.dateTimePickerDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePickerDate.Name = "dateTimePickerDate";
-            this.dateTimePickerDate.Size = new System.Drawing.Size(167, 20);
+            this.dateTimePickerDate.Size = new System.Drawing.Size(221, 22);
             this.dateTimePickerDate.TabIndex = 3;
             // 
             // labelDate
             // 
             this.labelDate.AutoSize = true;
             this.labelDate.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelDate.Location = new System.Drawing.Point(25, 163);
+            this.labelDate.Location = new System.Drawing.Point(33, 201);
+            this.labelDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDate.Name = "labelDate";
-            this.labelDate.Size = new System.Drawing.Size(192, 25);
+            this.labelDate.Size = new System.Drawing.Size(250, 31);
             this.labelDate.TabIndex = 4;
             this.labelDate.Text = "Дата на поръчка:";
             // 
@@ -101,9 +106,10 @@
             // 
             this.labelPaymentMethod.AutoSize = true;
             this.labelPaymentMethod.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPaymentMethod.Location = new System.Drawing.Point(12, 200);
+            this.labelPaymentMethod.Location = new System.Drawing.Point(16, 246);
+            this.labelPaymentMethod.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPaymentMethod.Name = "labelPaymentMethod";
-            this.labelPaymentMethod.Size = new System.Drawing.Size(207, 25);
+            this.labelPaymentMethod.Size = new System.Drawing.Size(266, 31);
             this.labelPaymentMethod.TabIndex = 5;
             this.labelPaymentMethod.Text = "Начин на плащане:";
             // 
@@ -111,46 +117,53 @@
             // 
             this.labelShippingAddress.AutoSize = true;
             this.labelShippingAddress.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelShippingAddress.Location = new System.Drawing.Point(12, 242);
+            this.labelShippingAddress.Location = new System.Drawing.Point(16, 298);
+            this.labelShippingAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelShippingAddress.Name = "labelShippingAddress";
-            this.labelShippingAddress.Size = new System.Drawing.Size(205, 25);
+            this.labelShippingAddress.Size = new System.Drawing.Size(263, 31);
             this.labelShippingAddress.TabIndex = 6;
             this.labelShippingAddress.Text = "Адрес за доставка:";
             // 
             // textBoxShippingAddress
             // 
-            this.textBoxShippingAddress.Location = new System.Drawing.Point(225, 248);
+            this.textBoxShippingAddress.Location = new System.Drawing.Point(300, 305);
+            this.textBoxShippingAddress.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxShippingAddress.Name = "textBoxShippingAddress";
-            this.textBoxShippingAddress.Size = new System.Drawing.Size(165, 20);
+            this.textBoxShippingAddress.Size = new System.Drawing.Size(219, 22);
             this.textBoxShippingAddress.TabIndex = 8;
             // 
             // dataGridViewOrders
             // 
             this.dataGridViewOrders.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewOrders.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOrders.Location = new System.Drawing.Point(405, 90);
+            this.dataGridViewOrders.Location = new System.Drawing.Point(540, 111);
+            this.dataGridViewOrders.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridViewOrders.Name = "dataGridViewOrders";
             this.dataGridViewOrders.RowHeadersWidth = 51;
-            this.dataGridViewOrders.Size = new System.Drawing.Size(561, 136);
+            this.dataGridViewOrders.Size = new System.Drawing.Size(748, 167);
             this.dataGridViewOrders.TabIndex = 9;
             this.dataGridViewOrders.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewOrders_CellClick);
             // 
             // dataGridViewCustomers
             // 
             this.dataGridViewCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewCustomers.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCustomers.Location = new System.Drawing.Point(405, 254);
+            this.dataGridViewCustomers.Location = new System.Drawing.Point(540, 313);
+            this.dataGridViewCustomers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridViewCustomers.Name = "dataGridViewCustomers";
             this.dataGridViewCustomers.RowHeadersWidth = 51;
-            this.dataGridViewCustomers.Size = new System.Drawing.Size(561, 143);
+            this.dataGridViewCustomers.Size = new System.Drawing.Size(748, 176);
             this.dataGridViewCustomers.TabIndex = 10;
             // 
             // buttonInsert
             // 
             this.buttonInsert.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonInsert.Location = new System.Drawing.Point(17, 296);
+            this.buttonInsert.Location = new System.Drawing.Point(23, 364);
+            this.buttonInsert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonInsert.Name = "buttonInsert";
-            this.buttonInsert.Size = new System.Drawing.Size(116, 37);
+            this.buttonInsert.Size = new System.Drawing.Size(155, 46);
             this.buttonInsert.TabIndex = 11;
             this.buttonInsert.Text = "Добави";
             this.buttonInsert.UseVisualStyleBackColor = true;
@@ -159,9 +172,10 @@
             // buttonUpdate
             // 
             this.buttonUpdate.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonUpdate.Location = new System.Drawing.Point(139, 295);
+            this.buttonUpdate.Location = new System.Drawing.Point(185, 363);
+            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(114, 38);
+            this.buttonUpdate.Size = new System.Drawing.Size(152, 47);
             this.buttonUpdate.TabIndex = 12;
             this.buttonUpdate.Text = "Промени";
             this.buttonUpdate.UseVisualStyleBackColor = true;
@@ -170,9 +184,10 @@
             // buttonDelete
             // 
             this.buttonDelete.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonDelete.Location = new System.Drawing.Point(259, 296);
+            this.buttonDelete.Location = new System.Drawing.Point(345, 364);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(113, 37);
+            this.buttonDelete.Size = new System.Drawing.Size(151, 46);
             this.buttonDelete.TabIndex = 13;
             this.buttonDelete.Text = "Изтрий";
             this.buttonDelete.UseVisualStyleBackColor = true;
@@ -181,9 +196,10 @@
             // buttonSave
             // 
             this.buttonSave.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonSave.Location = new System.Drawing.Point(139, 296);
+            this.buttonSave.Location = new System.Drawing.Point(185, 364);
+            this.buttonSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(114, 36);
+            this.buttonSave.Size = new System.Drawing.Size(152, 44);
             this.buttonSave.TabIndex = 14;
             this.buttonSave.Text = "Запази";
             this.buttonSave.UseVisualStyleBackColor = true;
@@ -193,9 +209,10 @@
             // buttonBack
             // 
             this.buttonBack.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonBack.Location = new System.Drawing.Point(835, 403);
+            this.buttonBack.Location = new System.Drawing.Point(1113, 496);
+            this.buttonBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonBack.Name = "buttonBack";
-            this.buttonBack.Size = new System.Drawing.Size(131, 35);
+            this.buttonBack.Size = new System.Drawing.Size(175, 43);
             this.buttonBack.TabIndex = 15;
             this.buttonBack.Text = "Назад";
             this.buttonBack.UseVisualStyleBackColor = true;
@@ -208,18 +225,20 @@
             "в брой",
             "с карта",
             "банков превод"});
-            this.comboBoxPaymentMethod.Location = new System.Drawing.Point(225, 205);
+            this.comboBoxPaymentMethod.Location = new System.Drawing.Point(300, 252);
+            this.comboBoxPaymentMethod.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxPaymentMethod.Name = "comboBoxPaymentMethod";
-            this.comboBoxPaymentMethod.Size = new System.Drawing.Size(165, 21);
+            this.comboBoxPaymentMethod.Size = new System.Drawing.Size(219, 24);
             this.comboBoxPaymentMethod.TabIndex = 16;
             // 
             // labelOrders
             // 
             this.labelOrders.AutoSize = true;
             this.labelOrders.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelOrders.Location = new System.Drawing.Point(639, 62);
+            this.labelOrders.Location = new System.Drawing.Point(852, 76);
+            this.labelOrders.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelOrders.Name = "labelOrders";
-            this.labelOrders.Size = new System.Drawing.Size(106, 25);
+            this.labelOrders.Size = new System.Drawing.Size(138, 31);
             this.labelOrders.TabIndex = 17;
             this.labelOrders.Text = "Поръчки:";
             // 
@@ -227,18 +246,21 @@
             // 
             this.labelCustomers.AutoSize = true;
             this.labelCustomers.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCustomers.Location = new System.Drawing.Point(634, 229);
+            this.labelCustomers.Location = new System.Drawing.Point(845, 282);
+            this.labelCustomers.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelCustomers.Name = "labelCustomers";
-            this.labelCustomers.Size = new System.Drawing.Size(111, 25);
+            this.labelCustomers.Size = new System.Drawing.Size(143, 31);
             this.labelCustomers.TabIndex = 18;
             this.labelCustomers.Text = "Клиенти:";
             // 
             // OrderForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(978, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1304, 554);
             this.Controls.Add(this.labelCustomers);
             this.Controls.Add(this.labelOrders);
             this.Controls.Add(this.comboBoxPaymentMethod);
@@ -258,6 +280,7 @@
             this.Controls.Add(this.labelCustomer);
             this.Controls.Add(this.labelOrder);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "OrderForm";
             this.Text = "OrderForm";

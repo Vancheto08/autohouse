@@ -47,6 +47,7 @@
             // dataGridViewResults
             // 
             this.dataGridViewResults.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewResults.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewResults.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewResults.Location = new System.Drawing.Point(44, 321);
             this.dataGridViewResults.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -60,6 +61,7 @@
             // 
             this.labelQuery.AutoSize = true;
             this.labelQuery.Font = new System.Drawing.Font("Georgia", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelQuery.ForeColor = System.Drawing.Color.DarkRed;
             this.labelQuery.Location = new System.Drawing.Point(491, 37);
             this.labelQuery.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelQuery.Name = "labelQuery";
@@ -118,6 +120,7 @@
             // labelGetCardOrdersByCustomers
             // 
             this.labelGetCardOrdersByCustomers.AutoSize = true;
+            this.labelGetCardOrdersByCustomers.BackColor = System.Drawing.Color.Transparent;
             this.labelGetCardOrdersByCustomers.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGetCardOrdersByCustomers.Location = new System.Drawing.Point(37, 111);
             this.labelGetCardOrdersByCustomers.Name = "labelGetCardOrdersByCustomers";
@@ -128,6 +131,7 @@
             // labelGetMostOrderedCar
             // 
             this.labelGetMostOrderedCar.AutoSize = true;
+            this.labelGetMostOrderedCar.BackColor = System.Drawing.Color.Transparent;
             this.labelGetMostOrderedCar.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGetMostOrderedCar.Location = new System.Drawing.Point(37, 162);
             this.labelGetMostOrderedCar.Name = "labelGetMostOrderedCar";
@@ -138,6 +142,7 @@
             // labelGetCarCountByManufacturer
             // 
             this.labelGetCarCountByManufacturer.AutoSize = true;
+            this.labelGetCarCountByManufacturer.BackColor = System.Drawing.Color.Transparent;
             this.labelGetCarCountByManufacturer.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGetCarCountByManufacturer.Location = new System.Drawing.Point(37, 265);
             this.labelGetCarCountByManufacturer.Name = "labelGetCarCountByManufacturer";
@@ -148,6 +153,7 @@
             // labelGetCarsByManufacturer
             // 
             this.labelGetCarsByManufacturer.AutoSize = true;
+            this.labelGetCarsByManufacturer.BackColor = System.Drawing.Color.Transparent;
             this.labelGetCarsByManufacturer.Font = new System.Drawing.Font("Georgia", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelGetCarsByManufacturer.Location = new System.Drawing.Point(37, 212);
             this.labelGetCarsByManufacturer.Name = "labelGetCarsByManufacturer";
@@ -181,19 +187,21 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1107, 663);
             this.Controls.Add(this.comboBoxManufacturers);
             this.Controls.Add(this.buttonBack);
             this.Controls.Add(this.labelGetCarsByManufacturer);
             this.Controls.Add(this.labelGetCarCountByManufacturer);
             this.Controls.Add(this.labelGetMostOrderedCar);
-            this.Controls.Add(this.labelGetCardOrdersByCustomers);
             this.Controls.Add(this.buttonGetCarsByManufacturer);
             this.Controls.Add(this.buttonGetCarsCountByManufacturer);
             this.Controls.Add(this.buttonGetMostOrderedCar);
             this.Controls.Add(this.buttonGetCardOrdersByCustomers);
             this.Controls.Add(this.labelQuery);
             this.Controls.Add(this.dataGridViewResults);
+            this.Controls.Add(this.labelGetCardOrdersByCustomers);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
